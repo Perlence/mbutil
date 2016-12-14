@@ -74,6 +74,10 @@ def pick_release(tracks):
     track = tracks[0]
     search_results = mb.search_releases(artist=track.artist, release=track.album, limit=10)
     for release in search_results['release-list']:
+        # Search score must be at least 80
+        if int(release['ext:score']) < 80:
+            break
+
         # Number of CDs must match
         if release['medium-count'] != cdc:
             continue
@@ -84,9 +88,6 @@ def pick_release(tracks):
             continue
 
         return release
-    else:
-        if search_results['release-list']:
-            return search_results['release-list'][0]
 
 
 def cd_count(tracks):
