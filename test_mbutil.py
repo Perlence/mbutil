@@ -43,7 +43,7 @@ def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw
             out = io.StringIO()
             err = io.StringIO()
             mbutil.cli(iter(raw_tracks), out, err)
-            assert artist_album in err.getvalue().splitlines()
+            assert err.getvalue().splitlines() == [artist_album]
             assert out.getvalue().splitlines() == list(track.title for track in tracks)
 
     raw_tracks = metallica_raw_tracks[1:] + kendrick_raw_tracks
@@ -53,11 +53,16 @@ def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw
     err = io.StringIO()
     with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
         mbutil.cli(iter(raw_tracks), out, err)
-    for _, _, artist_album in table:
-        assert artist_album in err.getvalue().splitlines()
-    assert (out.getvalue().splitlines() ==
-            list(track.title for track in metallica_tracks + kendrick_tracks)), \
+    assert err.getvalue().splitlines() == [artist_album for _, _, artist_album in table]
+    assert (out.getvalue().splitlines() == list(track.title for track in metallica_tracks + kendrick_tracks)), \
         'Tracks must be listed in order of album appearence in stdin'
+
+    out = io.StringIO()
+    err = io.StringIO()
+    with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
+        mbutil.cli(iter(['sfaluijhfsdkjlhfs - [vnielwslcns] ierkjifdnhajk']), out, err)
+    assert (err.getvalue().splitlines() == ['ERROR: nothing found for sfaluijhfsdkjlhfs - vnielwslcns']), \
+        'Must print error message if no releases were found'
 
 
 @pytest.fixture
@@ -72,7 +77,6 @@ def custom_vcr():
     v = vcr.VCR()
     v.register_matcher('unordered_query', unordered_query)
     v.match_on = ['method', 'scheme', 'host', 'port', 'path', 'unordered_query']
-    v.before_record_request
     return v
 
 

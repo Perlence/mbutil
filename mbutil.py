@@ -32,16 +32,21 @@ def cli(it, out, err):
 
     deferreds = []
     try:
-        for tracks in by_artist_album.values():
+        for (artist, album), tracks in by_artist_album.items():
             deferred = Queue(1)
             q.put((tracks, deferred))
-            deferreds.append(deferred)
+            deferreds.append((artist, album, deferred))
     finally:
         for _ in range(WORKERS):
             q.put(None)
 
-    for deferred in deferreds:
-        release, release_with_recordings = deferred.get()
+    for artist, album, deferred in deferreds:
+        release, release_with_recordings, e = deferred.get()
+        if e is not None:
+            raise e
+        if release is None:
+            print('ERROR: nothing found for {} - {}'.format(artist, album), file=err)
+            continue
         tags = release.get('tag-list', None)
         print('{} - {} {}'.format(release['artist-credit-phrase'], release['date'], release['title']),
               end='' if tags else None, file=err)
@@ -101,13 +106,19 @@ def quickthread(fn, *args, **kwargs):
 
 def worker(q):
     while True:
-        task = q.get()
-        if task is None:
-            break
-        tracks, deferred = task
-        release = pick_release(tracks)
-        release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
-        deferred.put((release, release_with_recordings))
+        try:
+            task = q.get()
+            if task is None:
+                break
+            tracks, deferred = task
+            release = pick_release(tracks)
+            if release is None:
+                deferred.put((None, None, None))
+                continue
+            release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
+            deferred.put((release, release_with_recordings, None))
+        except Exception as e:
+            deferred.put((None, None, e))
 
 
 def pick_release(tracks):

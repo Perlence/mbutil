@@ -1,0 +1,512 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Content-Length: ['0']
+      Host: [musicbrainz.org]
+      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+          )']
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
+  response:
+    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+        created=\"2016-12-14T13:39:00.011Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
+        xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
+        offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
+        Inc.</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab\"><name>Metallica</name><sort-name>Metallica</sort-name><alias-list><alias
+        sort-name=\"\u30E1\u30BF\u30EA\u30AB\">\u30E1\u30BF\u30EA\u30AB</alias><alias
+        locale=\"ko_KR\" sort-name=\"\uBA54\uD0C8\uB9AC\uCE74\" primary=\"primary\">\uBA54\uD0C8\uB9AC\uCE74</alias><alias
+        sort-name=\"Metalica\">Metalica</alias><alias locale=\"en\" sort-name=\"Metallica\"
+        type=\"Artist name\" primary=\"primary\">Metallica</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id=\"e683880a-b1d7-3599-9f70-680ac56d8667\" type=\"Album\"><primary-type>Album</primary-type></release-group><date>1998-11-24</date><country>US</country><release-event-list><release-event><date>1998-11-24</date><area
+        id=\"489ce91b-6658-3307-9877-795b68554c98\"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>075596229920</barcode><asin>B00000FCBC</asin><label-info-list><label-info><catalog-number>62299-2</catalog-number><label
+        id=\"873f9f75-af68-4872-98e2-431058e4c9a9\"><name>Elektra</name></label></label-info></label-info-list><medium-list
+        count=\"2\"><track-count>27</track-count><medium><format>CD</format><disc-list
+        count=\"13\"/><track-list count=\"11\"/></medium><medium><format>CD</format><disc-list
+        count=\"18\"/><track-list count=\"16\"/></medium></medium-list><tag-list><tag
+        count=\"2\"><name>rock</name></tag><tag count=\"2\"><name>heavy metal</name></tag><tag
+        count=\"2\"><name>thrash metal</name></tag><tag count=\"1\"><name>metal</name></tag><tag
+        count=\"2\"><name>hard rock</name></tag></tag-list></release><release id=\"df2180ab-16a1-4b94-8b25-8659bafb6c7a\"
+        ext:score=\"100\"><title>Garage Inc.</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab\"><name>Metallica</name><sort-name>Metallica</sort-name><alias-list><alias
+        sort-name=\"\u30E1\u30BF\u30EA\u30AB\">\u30E1\u30BF\u30EA\u30AB</alias><alias
+        locale=\"ko_KR\" sort-name=\"\uBA54\uD0C8\uB9AC\uCE74\" primary=\"primary\">\uBA54\uD0C8\uB9AC\uCE74</alias><alias
+        sort-name=\"Metalica\">Metalica</alias><alias locale=\"en\" sort-name=\"Metallica\"
+        type=\"Artist name\" primary=\"primary\">Metallica</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id=\"e683880a-b1d7-3599-9f70-680ac56d8667\" type=\"Album\"><primary-type>Album</primary-type></release-group><date>2010-09-22</date><country>JP</country><release-event-list><release-event><date>2010-09-22</date><area
+        id=\"2db42837-c832-3c27-b4a3-08198f75693c\"><name>Japan</name><sort-name>Japan</sort-name><iso-3166-1-code-list><iso-3166-1-code>JP</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>4988005628701</barcode><label-info-list><label-info><catalog-number>UICY-94670/1</catalog-number><label
+        id=\"4ef2a03c-57ae-4571-b23a-3fb29b9caa11\"><name>Universal International</name></label></label-info></label-info-list><medium-list
+        count=\"2\"><track-count>27</track-count><medium><format>SHM-CD</format><disc-list
+        count=\"1\"/><track-list count=\"11\"/></medium><medium><format>SHM-CD</format><disc-list
+        count=\"1\"/><track-list count=\"16\"/></medium></medium-list></release><release
+        id=\"89e78894-c0e6-3995-b69a-18938e9933f5\" ext:score=\"100\"><title>Garage
+        Inc.</title><status>Official</status><packaging>Jewel Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab\"><name>Metallica</name><sort-name>Metallica</sort-name><alias-list><alias
+        sort-name=\"\u30E1\u30BF\u30EA\u30AB\">\u30E1\u30BF\u30EA\u30AB</alias><alias
+        locale=\"ko_KR\" sort-name=\"\uBA54\uD0C8\uB9AC\uCE74\" primary=\"primary\">\uBA54\uD0C8\uB9AC\uCE74</alias><alias
+        sort-name=\"Metalica\">Metalica</alias><alias locale=\"en\" sort-name=\"Metallica\"
+        type=\"Artist name\" primary=\"primary\">Metallica</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id=\"e683880a-b1d7-3599-9f70-680ac56d8667\" type=\"Album\"><primary-type>Album</primary-type></release-group><date>1998-11</date><country>XE</country><release-event-list><release-event><date>1998-11</date><area
+        id=\"89a675c2-3e37-3518-b83c-418bad59a85a\"><name>Europe</name><sort-name>Europe</sort-name><iso-3166-1-code-list><iso-3166-1-code>XE</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>731453835122</barcode><asin>B0000240NH</asin><label-info-list><label-info><catalog-number>538
+        351-2</catalog-number><label id=\"1b3b52a5-ef89-4f8b-8d5f-e15a7a58863b\"><name>Vertigo</name></label></label-info></label-info-list><medium-list
+        count=\"2\"><track-count>27</track-count><medium><format>CD</format><disc-list
+        count=\"13\"/><track-list count=\"11\"/></medium><medium><format>CD</format><disc-list
+        count=\"18\"/><track-list count=\"16\"/></medium></medium-list><tag-list><tag
+        count=\"1\"><name>killed by loudness</name></tag></tag-list></release><release
+        id=\"fd4a849a-3d68-46bd-b6c1-acd3f825a1d7\" ext:score=\"100\"><title>Garage
+        Inc.</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab\"><name>Metallica</name><sort-name>Metallica</sort-name><alias-list><alias
+        sort-name=\"\u30E1\u30BF\u30EA\u30AB\">\u30E1\u30BF\u30EA\u30AB</alias><alias
+        locale=\"ko_KR\" sort-name=\"\uBA54\uD0C8\uB9AC\uCE74\" primary=\"primary\">\uBA54\uD0C8\uB9AC\uCE74</alias><alias
+        sort-name=\"Metalica\">Metalica</alias><alias locale=\"en\" sort-name=\"Metallica\"
+        type=\"Artist name\" primary=\"primary\">Metallica</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id=\"e683880a-b1d7-3599-9f70-680ac56d8667\" type=\"Album\"><primary-type>Album</primary-type></release-group><date>1998</date><country>US</country><release-event-list><release-event><date>1998</date><area
+        id=\"489ce91b-6658-3307-9877-795b68554c98\"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>075596229913</barcode><asin>B00000I661</asin><label-info-list><label-info><catalog-number>62299-1</catalog-number><label
+        id=\"873f9f75-af68-4872-98e2-431058e4c9a9\"><name>Elektra</name></label></label-info></label-info-list><medium-list
+        count=\"3\"><track-count>27</track-count><medium><format>12\" Vinyl</format><disc-list
+        count=\"0\"/><track-list count=\"7\"/></medium><medium><format>12\" Vinyl</format><disc-list
+        count=\"0\"/><track-list count=\"9\"/></medium><medium><format>12\" Vinyl</format><disc-list
+        count=\"0\"/><track-list count=\"11\"/></medium></medium-list></release><release
+        id=\"73102648-f148-3c5b-8e40-17f60ab35202\" ext:score=\"100\"><title>Garage
+        Inc.</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab\"><name>Metallica</name><sort-name>Metallica</sort-name><alias-list><alias
+        sort-name=\"\u30E1\u30BF\u30EA\u30AB\">\u30E1\u30BF\u30EA\u30AB</alias><alias
+        locale=\"ko_KR\" sort-name=\"\uBA54\uD0C8\uB9AC\uCE74\" primary=\"primary\">\uBA54\uD0C8\uB9AC\uCE74</alias><alias
+        sort-name=\"Metalica\">Metalica</alias><alias locale=\"en\" sort-name=\"Metallica\"
+        type=\"Artist name\" primary=\"primary\">Metallica</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id=\"e683880a-b1d7-3599-9f70-680ac56d8667\" type=\"Album\"><primary-type>Album</primary-type></release-group><date>1998-12-02</date><country>JP</country><release-event-list><release-event><date>1998-12-02</date><area
+        id=\"2db42837-c832-3c27-b4a3-08198f75693c\"><name>Japan</name><sort-name>Japan</sort-name><iso-3166-1-code-list><iso-3166-1-code>JP</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>4988009880990</barcode><asin>B000026X4L</asin><label-info-list><label-info><catalog-number>SRCS
+        8809</catalog-number><label id=\"7c614735-33ba-4bed-bbb7-89b7e72ce9bb\"><name>SME
+        Records</name></label></label-info><label-info><catalog-number>SRCS 8810</catalog-number><label
+        id=\"7c614735-33ba-4bed-bbb7-89b7e72ce9bb\"><name>SME Records</name></label></label-info></label-info-list><medium-list
+        count=\"2\"><track-count>27</track-count><medium><format>CD</format><disc-list
+        count=\"14\"/><track-list count=\"11\"/></medium><medium><format>CD</format><disc-list
+        count=\"19\"/><track-list count=\"16\"/></medium></medium-list></release><release
+        id=\"3ac9702d-e47f-458b-83a3-b287849befe9\" ext:score=\"100\"><title>Garage
+        Inc.</title><status>Official</status><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab\"><name>Metallica</name><sort-name>Metallica</sort-name><alias-list><alias
+        sort-name=\"\u30E1\u30BF\u30EA\u30AB\">\u30E1\u30BF\u30EA\u30AB</alias><alias
+        locale=\"ko_KR\" sort-name=\"\uBA54\uD0C8\uB9AC\uCE74\" primary=\"primary\">\uBA54\uD0C8\uB9AC\uCE74</alias><alias
+        sort-name=\"Metalica\">Metalica</alias><alias locale=\"en\" sort-name=\"Metallica\"
+        type=\"Artist name\" primary=\"primary\">Metallica</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id=\"e683880a-b1d7-3599-9f70-680ac56d8667\" type=\"Album\"><primary-type>Album</primary-type></release-group><date>2016</date><country>US</country><release-event-list><release-event><date>2016</date><area
+        id=\"489ce91b-6658-3307-9877-795b68554c98\"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode></barcode><label-info-list><label-info><label
+        id=\"43b4737e-dee7-4717-a92a-09e90bb5e34b\"><name>Blackened Recordings</name></label></label-info></label-info-list><medium-list
+        count=\"1\"><track-count>27</track-count><medium><format>Digital Media</format><disc-list
+        count=\"0\"/><track-list count=\"27\"/></medium></medium-list></release><release
+        id=\"62dfcd32-24d2-4d5e-8b3a-0c5484c473f6\" ext:score=\"100\"><title>Garage
+        Inc.</title><status>Official</status><packaging>Jewel Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab\"><name>Metallica</name><sort-name>Metallica</sort-name><alias-list><alias
+        sort-name=\"\u30E1\u30BF\u30EA\u30AB\">\u30E1\u30BF\u30EA\u30AB</alias><alias
+        locale=\"ko_KR\" sort-name=\"\uBA54\uD0C8\uB9AC\uCE74\" primary=\"primary\">\uBA54\uD0C8\uB9AC\uCE74</alias><alias
+        sort-name=\"Metalica\">Metalica</alias><alias locale=\"en\" sort-name=\"Metallica\"
+        type=\"Artist name\" primary=\"primary\">Metallica</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id=\"e683880a-b1d7-3599-9f70-680ac56d8667\" type=\"Album\"><primary-type>Album</primary-type></release-group><date>2014-08-25</date><country>US</country><release-event-list><release-event><date>2014-08-25</date><area
+        id=\"489ce91b-6658-3307-9877-795b68554c98\"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>856115004552</barcode><label-info-list><label-info><catalog-number>BLCKND013-2</catalog-number><label
+        id=\"13fbc037-a564-4876-938a-0ce9d7c39a58\"><name>Blackened</name></label></label-info></label-info-list><medium-list
+        count=\"2\"><track-count>27</track-count><medium><format>CD</format><disc-list
+        count=\"0\"/><track-list count=\"11\"/></medium><medium><format>CD</format><disc-list
+        count=\"0\"/><track-list count=\"16\"/></medium></medium-list></release><release
+        id=\"59aae6aa-b3ba-454b-a6be-fb129a7ca52f\" ext:score=\"48\"><title>Garage
+        Days Revisited</title><status>Bootleg</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab\"><name>Metallica</name><sort-name>Metallica</sort-name><alias-list><alias
+        sort-name=\"\u30E1\u30BF\u30EA\u30AB\">\u30E1\u30BF\u30EA\u30AB</alias><alias
+        locale=\"ko_KR\" sort-name=\"\uBA54\uD0C8\uB9AC\uCE74\" primary=\"primary\">\uBA54\uD0C8\uB9AC\uCE74</alias><alias
+        sort-name=\"Metalica\">Metalica</alias><alias locale=\"en\" sort-name=\"Metallica\"
+        type=\"Artist name\" primary=\"primary\">Metallica</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id=\"18c52517-edbd-3bcd-813d-cffebb4ecd12\" type=\"Compilation\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Compilation</secondary-type></secondary-type-list></release-group><date>1986</date><country>FR</country><release-event-list><release-event><date>1986</date><area
+        id=\"08310658-51eb-3801-80de-5a0739207115\"><name>France</name><sort-name>France</sort-name><iso-3166-1-code-list><iso-3166-1-code>FR</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><label-info-list><label-info><catalog-number>MT
+        49C</catalog-number><label id=\"dbe841d8-d2b1-4a58-a030-36137b12ca69\"><name>Keri</name></label></label-info></label-info-list><medium-list
+        count=\"1\"><track-count>9</track-count><medium><format>Vinyl</format><disc-list
+        count=\"0\"/><track-list count=\"9\"/></medium></medium-list></release><release
+        id=\"f19270aa-a778-4cca-afc0-7110bd0f09b3\" ext:score=\"48\"><title>The Complete
+        Garage Days...</title><status>Bootleg</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab\"><name>Metallica</name><sort-name>Metallica</sort-name><alias-list><alias
+        sort-name=\"\u30E1\u30BF\u30EA\u30AB\">\u30E1\u30BF\u30EA\u30AB</alias><alias
+        locale=\"ko_KR\" sort-name=\"\uBA54\uD0C8\uB9AC\uCE74\" primary=\"primary\">\uBA54\uD0C8\uB9AC\uCE74</alias><alias
+        sort-name=\"Metalica\">Metalica</alias><alias locale=\"en\" sort-name=\"Metallica\"
+        type=\"Artist name\" primary=\"primary\">Metallica</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id=\"f3c9e4be-1248-3c19-97db-a3f9d5507ca7\" type=\"Compilation\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Compilation</secondary-type></secondary-type-list></release-group><date>1997</date><country>DE</country><release-event-list><release-event><date>1997</date><area
+        id=\"85752fda-13c4-31a3-bee5-0e5cb1f51dad\"><name>Germany</name><sort-name>Germany</sort-name><iso-3166-1-code-list><iso-3166-1-code>DE</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>4099471108151</barcode><medium-list
+        count=\"1\"><track-count>18</track-count><medium><format>CD</format><disc-list
+        count=\"0\"/><track-list count=\"18\"/></medium></medium-list></release><release
+        id=\"82ddad95-e191-4b95-8f57-360708117331\" ext:score=\"48\"><title>Garage
+        Days and More</title><status>Bootleg</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab\"><name>Metallica</name><sort-name>Metallica</sort-name><alias-list><alias
+        sort-name=\"\u30E1\u30BF\u30EA\u30AB\">\u30E1\u30BF\u30EA\u30AB</alias><alias
+        locale=\"ko_KR\" sort-name=\"\uBA54\uD0C8\uB9AC\uCE74\" primary=\"primary\">\uBA54\uD0C8\uB9AC\uCE74</alias><alias
+        sort-name=\"Metalica\">Metalica</alias><alias locale=\"en\" sort-name=\"Metallica\"
+        type=\"Artist name\" primary=\"primary\">Metallica</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
+        id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
+        count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+    headers:
+      Access-Control-Allow-Origin: ['*']
+      Connection: [close]
+      Content-Type: [application/xml; charset=UTF-8]
+      Date: ['Wed, 14 Dec 2016 14:09:22 GMT']
+      Last-Modified: ['Wed, 14 Dec 2016 13:39:00 GMT']
+      Server: [Jetty(9.3.10.v20160621)]
+      Vary: [Accept-Encoding]
+      X-RateLimit-Limit: ['700']
+      X-RateLimit-Remaining: ['536']
+      X-RateLimit-Reset: ['1481724563']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Content-Length: ['0']
+      Host: [musicbrainz.org]
+      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+          )']
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/7f5a52aa-4429-4771-80ec-6c6a545b0df9?inc=recordings
+  response:
+    body: {string: '<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#"><release
+        id="7f5a52aa-4429-4771-80ec-6c6a545b0df9"><title>Garage Inc.</title><status
+        id="4e304316-386d-3409-af2e-78857eec5cfe">Official</status><quality>normal</quality><text-representation><language>eng</language><script>Latn</script></text-representation><date>1998-11-24</date><country>US</country><release-event-list
+        count="1"><release-event><date>1998-11-24</date><area id="489ce91b-6658-3307-9877-795b68554c98"><name>United
+        States</name><sort-name>United States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>075596229920</barcode><asin>B00000FCBC</asin><cover-art-archive><artwork>true</artwork><count>2</count><front>true</front><back>false</back></cover-art-archive><medium-list
+        count="2"><medium><title>New Recordings ''98</title><position>1</position><format
+        id="9712d52a-4509-3d4b-a1a2-67c88c643e31">CD</format><track-list offset="0"
+        count="11"><track id="20fc3adc-5e94-3494-975d-549543256552"><position>1</position><number>1</number><length>155533</length><recording
+        id="7ea58751-5279-4a69-878b-27dbf84d841d"><title>Free Speech for the Dumb</title><length>155533</length></recording></track><track
+        id="e11a65b5-c2fa-3719-8504-45054795b8df"><position>2</position><number>2</number><length>213933</length><recording
+        id="2f8b7941-1d38-4791-9590-c861b5553d6f"><title>It''s Electric</title><length>213933</length></recording></track><track
+        id="8439adbd-75ce-348e-995c-5020d8f32229"><position>3</position><number>3</number><length>380240</length><recording
+        id="9cb832dc-ac90-4ff7-a4e1-9652d673489a"><title>Sabbra Cadabra</title><length>380240</length></recording></track><track
+        id="2ac82220-7942-3885-94fe-b2abef091fea"><position>4</position><number>4</number><length>366400</length><recording
+        id="cb5e638b-94b3-4a7f-ac77-8d36ff9669a4"><title>Turn the Page</title><length>366400</length></recording></track><track
+        id="6ab900d4-7ea6-32f1-af96-2a4abbe79aec"><position>5</position><number>5</number><length>149333</length><recording
+        id="185340db-39e1-43d6-8e12-12ed6451def2"><title>Die, Die My Darling</title><length>149333</length></recording></track><track
+        id="4cc63b4a-0eee-3dae-b602-44d41a6db084"><position>6</position><number>6</number><length>472693</length><recording
+        id="580456a2-eda2-4819-97a1-384bcbda4a2c"><title>Loverman</title><length>472693</length></recording></track><track
+        id="adc2ebad-f354-3c42-ac66-2380490f7693"><position>7</position><number>7</number><length>671573</length><recording
+        id="d5ebe441-df40-4667-9431-a891cbb47807"><title>Mercyful Fate: Satan''s Fall
+        / Curse of the Pharaohs / A Corpse Without Soul / Into the Coven / Evil</title><length>671573</length></recording></track><track
+        id="a9dd456c-ffef-30a4-b253-5938e0d506dd"><position>8</position><number>8</number><length>397533</length><recording
+        id="3af750fa-7818-46bd-92c6-4a624aa9c610"><title>Astronomy</title><length>397533</length></recording></track><track
+        id="6d9f80c6-a343-3a22-83f7-37d0aa4d15e7"><position>9</position><number>9</number><length>304893</length><recording
+        id="fd91dde6-5856-44a7-80c7-7a910576c0d4"><title>Whiskey in the Jar</title><length>304893</length></recording></track><track
+        id="13d28b27-bb22-3f39-a12a-09e29e7e922d"><position>10</position><number>10</number><length>545733</length><recording
+        id="3bf8d218-4128-48f6-b2ea-31cf4a118cf0"><title>Tuesday''s Gone</title><length>545733</length></recording></track><track
+        id="307a52b5-2d05-3513-8c91-4b6585777930"><position>11</position><number>11</number><length>288733</length><recording
+        id="de2aedca-4d06-4eea-9ee5-b69984578c54"><title>The More I See</title><length>288733</length></recording></track></track-list></medium><medium><position>2</position><format
+        id="9712d52a-4509-3d4b-a1a2-67c88c643e31">CD</format><track-list count="16"
+        offset="0"><track id="92e9cce1-9a7c-34a8-a6fb-b726a198852f"><position>1</position><number>1</number><length>398333</length><recording
+        id="5c51b85b-6b5d-4d6a-86a3-14121d065d39"><title>Helpless</title><length>398333</length></recording></track><track
+        id="2e4483c7-01ef-3b57-9402-b3f3ad6b3a08"><position>2</position><number>2</number><length>403240</length><recording
+        id="93611f80-b88c-4e8f-8e87-623b4d4b5cf0"><title>The Small Hours</title><length>402266</length></recording></track><track
+        id="61f5117c-0e65-377a-9d25-d8a00da4b970"><position>3</position><number>3</number><length>295266</length><recording
+        id="a209cf32-fb35-4b24-8f5a-cabdacb60f63"><title>The Wait</title><length>295000</length></recording></track><track
+        id="d5c83184-7e42-3969-886a-db903b7dff28"><position>4</position><number>4</number><length>190333</length><recording
+        id="be59d4b3-5832-4ef1-ab72-29e8dd8dfd3f"><title>Crash Course in Brain Surgery</title><length>190333</length></recording></track><track
+        id="4fc9a35b-8792-3e4f-8720-43b7fc179d11"><position>5</position><number>5</number><length>209800</length><recording
+        id="204b7844-3a08-4456-bc1d-49d9bcf8e09d"><title>Last Caress / Green Hell</title><length>209600</length></recording></track><track
+        id="bd31ce3c-1c31-3db7-ba82-003ffd819651"><position>6</position><number>6</number><length>470133</length><recording
+        id="e60ec105-6bce-488d-ba87-0febec4ba2b9"><title>Am I Evil?</title><length>470133</length></recording></track><track
+        id="03c7aaec-685b-33b0-a94a-df8383523816"><position>7</position><number>7</number><length>216800</length><recording
+        id="383154b9-15e4-40e7-8106-cd328c7939c8"><title>Blitzkrieg</title><length>216573</length></recording></track><track
+        id="016b6f95-96e5-3750-ac3b-f5638d463c85"><position>8</position><number>8</number><length>341333</length><recording
+        id="d42bfa92-fafd-425f-b323-e1a70ccbb4d6"><title>Breadfan</title><length>341226</length></recording></track><track
+        id="9002fdeb-66c8-315b-a610-2bb4e1e2689a"><position>9</position><number>9</number><length>265600</length><recording
+        id="b2e8e1a2-2933-4429-8422-bb251ab7a075"><title>The Prince</title><length>265666</length></recording></track><track
+        id="c4f458d5-d02b-3fae-b286-4b3aa5ea494c"><position>10</position><number>10</number><length>137626</length><recording
+        id="3933a24b-60bf-4b86-a5d3-92eb91f63560"><title>Stone Cold Crazy</title><length>137626</length></recording></track><track
+        id="55d725f4-91d0-3764-9cae-22213499b813"><position>11</position><number>11</number><length>188973</length><recording
+        id="c135a6ad-3d89-4535-81c1-749961145797"><title>So What</title><length>188973</length></recording></track><track
+        id="374303aa-715a-37a6-bae9-efa4cede1f23"><position>12</position><number>12</number><length>183826</length><recording
+        id="e87d536f-6c82-4558-967d-6f57054ab353"><title>Killing Time</title><length>183826</length></recording></track><track
+        id="99daebfe-5fe2-3922-af3b-a4b9dd9a725b"><position>13</position><number>13</number><length>244800</length><recording
+        id="903a162d-0865-4b85-bd31-9aae213b01c3"><title>Overkill</title><length>245000</length></recording></track><track
+        id="6b937799-b643-340f-9d9a-1fcc83d7e0a5"><position>14</position><number>14</number><length>220306</length><recording
+        id="11c7e857-5447-4dd8-88ba-6ff9b0f5a361"><title>Damage Case</title><length>220306</length></recording></track><track
+        id="5129af19-8c59-3b65-a5ae-a531442e8560"><position>15</position><number>15</number><length>291933</length><recording
+        id="b6f1d137-cfc6-4198-b4f0-ebb6756b18ca"><title>Stone Dead Forever</title><length>292000</length></recording></track><track
+        id="d9e0f60d-bbaa-3c2e-9442-ee5c2f0a9426"><position>16</position><number>16</number><length>192200</length><recording
+        id="30ce590a-696a-4a78-8fea-14eb87c7149c"><title>Too Late Too Late</title><length>192200</length></recording></track></track-list></medium></medium-list></release></metadata>'}
+    headers:
+      Access-Control-Allow-Origin: ['*']
+      Connection: [close]
+      Content-Length: ['7745']
+      Content-Type: [application/xml; charset=utf-8]
+      Date: ['Wed, 14 Dec 2016 14:09:23 GMT']
+      ETag: ['"6a9042c73e6c2b0d0c91fe2cd15ba1d7"']
+      Server: ['Plack::Handler::Starlet']
+      Vary: [Accept-Encoding]
+      X-RateLimit-Limit: ['700']
+      X-RateLimit-Remaining: ['234']
+      X-RateLimit-Reset: ['1481724563']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Content-Length: ['0']
+      Host: [musicbrainz.org]
+      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+          )']
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
+  response:
+    body: {string: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata
+        created="2016-12-14T13:39:00.011Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#"
+        xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list count="10916"
+        offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9" ext:score="100"><title>good
+        kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes Deluxe
+        Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
+        Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
+        Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
+        Duckworth</alias><alias sort-name="Duckworth, Kendrick Lamar" type="Legal
+        name">Kendrick Lamar Duckworth</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id="499c19c8-0dab-4824-884b-6191d145e95b" type="Album"><primary-type>Album</primary-type></release-group><date>2012-10-22</date><country>US</country><release-event-list><release-event><date>2012-10-22</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode></barcode><label-info-list><label-info><label
+        id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info><label-info><label
+        id="2182a316-c4bd-4605-936a-5e2fac52bdd2"><name>Interscope Records</name></label></label-info><label-info><label
+        id="56d2501f-12b7-4cfd-b8f8-e95189ea27f5"><name>Top Dawg Entertainment</name></label></label-info></label-info-list><medium-list
+        count="1"><track-count>19</track-count><medium><format>Digital Media</format><disc-list
+        count="0"/><track-list count="19"/></medium></medium-list></release><release
+        id="e1d99364-1ad9-4f4d-9505-2242eff10a44" ext:score="100"><title>good kid,
+        m.A.A.d city</title><status>Official</status><disambiguation>deluxe edition</disambiguation><packaging>Jewel
+        Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
+        Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
+        Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
+        Duckworth</alias><alias sort-name="Duckworth, Kendrick Lamar" type="Legal
+        name">Kendrick Lamar Duckworth</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id="499c19c8-0dab-4824-884b-6191d145e95b" type="Album"><primary-type>Album</primary-type></release-group><date>2012-10-22</date><country>US</country><release-event-list><release-event><date>2012-10-22</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537162321</barcode><asin>B00913P6G0</asin><label-info-list><label-info><catalog-number>B0017536-02</catalog-number><label
+        id="2182a316-c4bd-4605-936a-5e2fac52bdd2"><name>Interscope Records</name></label></label-info><label-info><label
+        id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info><label-info><label
+        id="56d2501f-12b7-4cfd-b8f8-e95189ea27f5"><name>Top Dawg Entertainment</name></label></label-info></label-info-list><medium-list
+        count="2"><track-count>15</track-count><medium><format>CD</format><disc-list
+        count="1"/><track-list count="12"/></medium><medium><format>CD</format><disc-list
+        count="1"/><track-list count="3"/></medium></medium-list></release><release
+        id="bb772ff7-7ed8-435b-9bfe-90df819fa605" ext:score="100"><title>good kid,
+        m.A.A.d city</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
+        Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
+        Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
+        Duckworth</alias><alias sort-name="Duckworth, Kendrick Lamar" type="Legal
+        name">Kendrick Lamar Duckworth</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id="499c19c8-0dab-4824-884b-6191d145e95b" type="Album"><primary-type>Album</primary-type></release-group><date>2012-10-23</date><country>GB</country><release-event-list><release-event><date>2012-10-23</date><area
+        id="8a754a16-0027-3a29-b6d7-2b40ea0481ed"><name>United Kingdom</name><sort-name>United
+        Kingdom</sort-name><iso-3166-1-code-list><iso-3166-1-code>GB</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>0602537156535</barcode><asin>B0090X4HES</asin><label-info-list><label-info><catalog-number>3715653</catalog-number><label
+        id="ce24ab18-1bd6-4293-a486-546d13d6a5e2"><name>Polydor</name></label></label-info></label-info-list><medium-list
+        count="1"><track-count>12</track-count><medium><format>CD</format><disc-list
+        count="1"/><track-list count="12"/></medium></medium-list></release><release
+        id="cdf94048-849f-4beb-a5b1-fdb2c503ca67" ext:score="100"><title>good kid,
+        m.A.A.d city</title><status>Official</status><disambiguation>Target deluxe
+        edition</disambiguation><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
+        Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
+        Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
+        Duckworth</alias><alias sort-name="Duckworth, Kendrick Lamar" type="Legal
+        name">Kendrick Lamar Duckworth</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id="499c19c8-0dab-4824-884b-6191d145e95b" type="Album"><primary-type>Album</primary-type></release-group><date>2012-10-22</date><country>US</country><release-event-list><release-event><date>2012-10-22</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><label-info-list><label-info><catalog-number>B0017675-02</catalog-number><label
+        id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info><label-info><catalog-number>B0017675-02</catalog-number><label
+        id="2182a316-c4bd-4605-936a-5e2fac52bdd2"><name>Interscope Records</name></label></label-info><label-info><label
+        id="56d2501f-12b7-4cfd-b8f8-e95189ea27f5"><name>Top Dawg Entertainment</name></label></label-info></label-info-list><medium-list
+        count="2"><track-count>17</track-count><medium><format>CD</format><disc-list
+        count="1"/><track-list count="12"/></medium><medium><format>CD</format><disc-list
+        count="1"/><track-list count="5"/></medium></medium-list></release><release
+        id="5d850f71-e51e-44be-96c8-51cc305f3596" ext:score="100"><title>good kid,
+        m.A.A.d city</title><status>Official</status><packaging>Jewel Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
+        Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
+        Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
+        Duckworth</alias><alias sort-name="Duckworth, Kendrick Lamar" type="Legal
+        name">Kendrick Lamar Duckworth</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id="499c19c8-0dab-4824-884b-6191d145e95b" type="Album"><primary-type>Album</primary-type></release-group><date>2012-10-22</date><country>US</country><release-event-list><release-event><date>2012-10-22</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537156535</barcode><asin>B0090X4HES</asin><label-info-list><label-info><catalog-number>B0017534-02</catalog-number><label
+        id="2182a316-c4bd-4605-936a-5e2fac52bdd2"><name>Interscope Records</name></label></label-info><label-info><label
+        id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info><label-info><label
+        id="56d2501f-12b7-4cfd-b8f8-e95189ea27f5"><name>Top Dawg Entertainment</name></label></label-info></label-info-list><medium-list
+        count="1"><track-count>12</track-count><medium><format>CD</format><disc-list
+        count="1"/><track-list count="12"/></medium></medium-list></release><release
+        id="09bef99c-27d7-48b9-8c41-187f0f499743" ext:score="100"><title>good kid,
+        m.A.A.d city</title><status>Official</status><disambiguation>2013 reissue</disambiguation><packaging>Jewel
+        Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
+        Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
+        Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
+        Duckworth</alias><alias sort-name="Duckworth, Kendrick Lamar" type="Legal
+        name">Kendrick Lamar Duckworth</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id="499c19c8-0dab-4824-884b-6191d145e95b" type="Album"><primary-type>Album</primary-type></release-group><date>2013-04-23</date><country>US</country><release-event-list><release-event><date>2013-04-23</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537362691</barcode><asin>B00BU987C8</asin><label-info-list><label-info><label
+        id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info><label-info><label
+        id="2182a316-c4bd-4605-936a-5e2fac52bdd2"><name>Interscope Records</name></label></label-info><label-info><label
+        id="56d2501f-12b7-4cfd-b8f8-e95189ea27f5"><name>Top Dawg Entertainment</name></label></label-info></label-info-list><medium-list
+        count="2"><track-count>18</track-count><medium><format>CD</format><disc-list
+        count="0"/><track-list count="12"/></medium><medium><format>CD</format><disc-list
+        count="0"/><track-list count="6"/></medium></medium-list></release><release
+        id="58873e97-80b4-4055-9540-e2836584d1f2" ext:score="100"><title>good Kid,
+        m.A.A.d city</title><status>Official</status><disambiguation>deluxe</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
+        Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
+        Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
+        Duckworth</alias><alias sort-name="Duckworth, Kendrick Lamar" type="Legal
+        name">Kendrick Lamar Duckworth</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id="499c19c8-0dab-4824-884b-6191d145e95b" type="Album"><primary-type>Album</primary-type></release-group><date>2013-06-19</date><country>DE</country><release-event-list><release-event><date>2013-06-19</date><area
+        id="85752fda-13c4-31a3-bee5-0e5cb1f51dad"><name>Germany</name><sort-name>Germany</sort-name><iso-3166-1-code-list><iso-3166-1-code>DE</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><asin>B00D5Z81S0</asin><label-info-list><label-info><label
+        id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info><label-info><label
+        id="2182a316-c4bd-4605-936a-5e2fac52bdd2"><name>Interscope Records</name></label></label-info><label-info><label
+        id="56d2501f-12b7-4cfd-b8f8-e95189ea27f5"><name>Top Dawg Entertainment</name></label></label-info></label-info-list><medium-list
+        count="2"><track-count>17</track-count><medium><format>Digital Media</format><disc-list
+        count="0"/><track-list count="12"/></medium><medium><format>Digital Media</format><disc-list
+        count="0"/><track-list count="5"/></medium></medium-list></release><release
+        id="fe7e674a-c44c-4b73-ad5c-c19be212b7b4" ext:score="100"><title>good kid,
+        m.A.A.d city</title><status>Official</status><packaging>Cardboard/Paper Sleeve</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
+        Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
+        Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
+        Duckworth</alias><alias sort-name="Duckworth, Kendrick Lamar" type="Legal
+        name">Kendrick Lamar Duckworth</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id="499c19c8-0dab-4824-884b-6191d145e95b" type="Album"><primary-type>Album</primary-type></release-group><date>2012-10-22</date><country>US</country><release-event-list><release-event><date>2012-10-22</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537192267</barcode><label-info-list><label-info><catalog-number>B0017695-01</catalog-number><label
+        id="56d2501f-12b7-4cfd-b8f8-e95189ea27f5"><name>Top Dawg Entertainment</name></label></label-info></label-info-list><medium-list
+        count="1"><track-count>15</track-count><medium><format>12" Vinyl</format><disc-list
+        count="0"/><track-list count="15"/></medium></medium-list></release><release
+        id="ce67fdee-12b0-41aa-b18b-a2f1287938ae" ext:score="100"><title>good kid,
+        m.A.A.d city</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
+        Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
+        Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
+        Duckworth</alias><alias sort-name="Duckworth, Kendrick Lamar" type="Legal
+        name">Kendrick Lamar Duckworth</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id="499c19c8-0dab-4824-884b-6191d145e95b" type="Album"><primary-type>Album</primary-type></release-group><date>2013-04-03</date><country>US</country><release-event-list><release-event><date>2013-04-03</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537362721</barcode><asin>B00BU981YC</asin><label-info-list><label-info><catalog-number>B0018377-02</catalog-number><label
+        id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info><label-info><catalog-number>B0018377-02</catalog-number><label
+        id="2182a316-c4bd-4605-936a-5e2fac52bdd2"><name>Interscope Records</name></label></label-info></label-info-list><medium-list
+        count="1"><track-count>13</track-count><medium><format>CD</format><disc-list
+        count="1"/><track-list count="13"/></medium></medium-list></release><release
+        id="48415b02-026d-49e8-8daf-e0c6c0e6836f" ext:score="100"><title>good kid,
+        m.A.A.d city</title><status>Official</status><packaging>Jewel Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
+        Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
+        Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
+        Duckworth</alias><alias sort-name="Duckworth, Kendrick Lamar" type="Legal
+        name">Kendrick Lamar Duckworth</alias></alias-list></artist></name-credit></artist-credit><release-group
+        id="499c19c8-0dab-4824-884b-6191d145e95b" type="Album"><primary-type>Album</primary-type></release-group><date>2013-07-19</date><country>DE</country><release-event-list><release-event><date>2013-07-19</date><area
+        id="85752fda-13c4-31a3-bee5-0e5cb1f51dad"><name>Germany</name><sort-name>Germany</sort-name><iso-3166-1-code-list><iso-3166-1-code>DE</iso-3166-1-code></iso-3166-1-code-list></area></release-event><release-event><date>2013-07-26</date><area
+        id="ef1b7cc0-cd26-36f4-8ea0-04d9623786c7"><name>Netherlands</name><sort-name>Netherlands</sort-name><iso-3166-1-code-list><iso-3166-1-code>NL</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537439430</barcode><asin>B00D3LOJ6O</asin><label-info-list><label-info><catalog-number>0602537439430</catalog-number><label
+        id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info></label-info-list><medium-list
+        count="1"><track-count>14</track-count><medium><format>CD</format><disc-list
+        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>'}
+    headers:
+      Access-Control-Allow-Origin: ['*']
+      Connection: [close]
+      Content-Type: [application/xml; charset=UTF-8]
+      Date: ['Wed, 14 Dec 2016 14:09:29 GMT']
+      Last-Modified: ['Wed, 14 Dec 2016 13:39:00 GMT']
+      Server: [Jetty(9.3.10.v20160621)]
+      Vary: [Accept-Encoding]
+      X-RateLimit-Limit: ['700']
+      X-RateLimit-Remaining: ['258']
+      X-RateLimit-Reset: ['1481724569']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Content-Length: ['0']
+      Host: [musicbrainz.org]
+      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+          )']
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/48415b02-026d-49e8-8daf-e0c6c0e6836f?inc=recordings
+  response:
+    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><metadata xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"><release
+        id=\"48415b02-026d-49e8-8daf-e0c6c0e6836f\"><title>good kid, m.A.A.d city</title><status
+        id=\"4e304316-386d-3409-af2e-78857eec5cfe\">Official</status><quality>normal</quality><packaging
+        id=\"ec27701a-4a22-37f4-bfac-6616e0f9750a\">Jewel Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><date>2013-07-19</date><country>DE</country><release-event-list
+        count=\"2\"><release-event><date>2013-07-19</date><area id=\"85752fda-13c4-31a3-bee5-0e5cb1f51dad\"><name>Germany</name><sort-name>Germany</sort-name><iso-3166-1-code-list><iso-3166-1-code>DE</iso-3166-1-code></iso-3166-1-code-list></area></release-event><release-event><date>2013-07-26</date><area
+        id=\"ef1b7cc0-cd26-36f4-8ea0-04d9623786c7\"><name>Netherlands</name><sort-name>Netherlands</sort-name><iso-3166-1-code-list><iso-3166-1-code>NL</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537439430</barcode><asin>B00D3LOJ6O</asin><cover-art-archive><artwork>true</artwork><count>15</count><front>true</front><back>true</back></cover-art-archive><medium-list
+        count=\"1\"><medium><position>1</position><format id=\"9712d52a-4509-3d4b-a1a2-67c88c643e31\">CD</format><track-list
+        count=\"14\" offset=\"0\"><track id=\"026f6d77-643e-4d47-972a-484af6caa3b7\"><position>1</position><number>1</number><length>273640</length><recording
+        id=\"0eb9cab9-0e38-43d3-aeb6-68384e209a0c\"><title>Sherane a.k.a. Master Splinter\u2019s
+        Daughter</title><length>273000</length></recording></track><track id=\"8231433f-e2a4-41e1-9ac4-3f23030dd62a\"><position>2</position><number>2</number><length>310720</length><recording
+        id=\"54494123-9670-4b2d-83ad-85c46c8f5200\"><title>Bitch, Don\u2019t Kill
+        My Vibe</title><length>310000</length></recording></track><track id=\"fbfa3a95-ad16-4722-8458-a0f0bcec7b78\"><position>3</position><number>3</number><length>212653</length><recording
+        id=\"a3c6af59-af56-4d61-beac-032df8fc4015\"><title>Backseat Freestyle</title><length>212000</length></recording></track><track
+        id=\"8b25262d-ca92-40f5-b237-3ba276e86117\"><position>4</position><number>4</number><length>324533</length><recording
+        id=\"fd83178d-c064-4689-9c09-bef8f1c4cad9\"><title>The Art of Peer Pressure</title><length>324000</length></recording></track><track
+        id=\"bac02879-5a4a-47ea-8eb2-32e5fa838480\"><position>5</position><number>5</number><length>386906</length><recording
+        id=\"c294757b-0430-4eb4-ae7a-6abcffb87405\"><title>Money Trees</title><length>386000</length></recording></track><track
+        id=\"e7ae2a69-5879-49a8-9be5-dd0e11d99922\"><position>6</position><number>6</number><length>300160</length><recording
+        id=\"21842c0b-b4ac-4418-878c-4f377032f0fe\"><title>Poetic Justice</title><length>300000</length></recording></track><track
+        id=\"fd5412fc-992b-4e44-a9da-f58dac356b72\"><position>7</position><number>7</number><length>214120</length><recording
+        id=\"421d5f93-107c-46b3-953e-cad600e1e25c\"><title>good kid</title><length>214000</length></recording></track><track
+        id=\"106fa1a0-20b7-4225-b820-0008117b276a\"><position>8</position><number>8</number><length>350120</length><recording
+        id=\"d142987d-69a5-426c-8d41-20ce2cc1534b\"><title>m.A.A.d city</title><length>350000</length></recording></track><track
+        id=\"9df23eae-ecd1-4c77-af57-235ed2440435\"><position>9</position><number>9</number><length>313786</length><recording
+        id=\"7dee4afc-5931-4295-955a-7ae44f403e70\"><title>Swimming Pools (Drank)
+        (extended version)</title><length>313000</length></recording></track><track
+        id=\"888c0d38-01a7-4020-8f63-a51c6490e34c\"><position>10</position><number>10</number><length>723573</length><recording
+        id=\"f0fc2708-edfa-431c-80bd-305796cc5a48\"><title>Sing About Me, I\u2019m
+        Dying of Thirst</title><length>723000</length></recording></track><track id=\"3cd257c6-1bd6-42ac-948b-ea817344b659\"><position>11</position><number>11</number><length>443413</length><recording
+        id=\"02fac8cb-82c0-4129-803e-f675e8468a93\"><title>Real</title><length>443000</length></recording></track><track
+        id=\"f4ae96bc-8108-4e00-870e-e6dcc08cd343\"><position>12</position><number>12</number><length>248426</length><recording
+        id=\"115be1e6-3937-41ef-96dd-11b768c3a56e\"><title>Compton</title><length>248000</length></recording></track><track
+        id=\"eed65f57-2207-4065-9512-8453ad6ed95d\"><position>13</position><number>13</number><length>279533</length><recording
+        id=\"af3c6239-d09d-4978-8e2b-e5115a7dd6dc\"><title>Bitch, Don\u2019t Kill
+        My Vibe (remix)</title><length>279533</length></recording></track><track id=\"9ca66e0f-2cce-404a-bdce-3ed51a9ab91c\"><position>14</position><number>14</number><length>305826</length><recording
+        id=\"8b42f0b5-7594-424b-93eb-0a418232b10f\"><title>Bitch, Don\u2019t Kill
+        My Vibe (International remix)</title><length>305826</length></recording></track></track-list></medium></medium-list></release></metadata>"}
+    headers:
+      Access-Control-Allow-Origin: ['*']
+      Connection: [close]
+      Content-Length: ['4854']
+      Content-Type: [application/xml; charset=utf-8]
+      Date: ['Wed, 14 Dec 2016 14:09:34 GMT']
+      ETag: ['"d1d73666fbfb7440e416a900eeff86d6"']
+      Server: ['Plack::Handler::Starlet']
+      Vary: [Accept-Encoding]
+      X-RateLimit-Limit: ['700']
+      X-RateLimit-Remaining: ['449']
+      X-RateLimit-Reset: ['1481724575']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Content-Length: ['0']
+      Host: [musicbrainz.org]
+      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+          )']
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28vnielwslcns%29+artist%3A%28sfaluijhfsdkjlhfs%29
+  response:
+    body: {string: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata
+        created="2016-12-14T13:39:00.011Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#"
+        xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list count="0" offset="0"/></metadata>'}
+    headers:
+      Access-Control-Allow-Origin: ['*']
+      Connection: [close]
+      Content-Type: [application/xml; charset=UTF-8]
+      Date: ['Wed, 14 Dec 2016 14:09:39 GMT']
+      Last-Modified: ['Wed, 14 Dec 2016 13:39:00 GMT']
+      Server: [Jetty(9.3.10.v20160621)]
+      Vary: [Accept-Encoding]
+      X-RateLimit-Limit: ['700']
+      X-RateLimit-Remaining: ['360']
+      X-RateLimit-Reset: ['1481724579']
+    status: {code: 200, message: OK}
+version: 1
