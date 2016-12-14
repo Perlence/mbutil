@@ -1,15 +1,10 @@
 from collections import OrderedDict, namedtuple
 from itertools import groupby
-from queue import Queue
 import re
-import threading
-import time
 import sys
 
 import musicbrainzngs as mb
 from titlecase import titlecase
-
-WORKERS = 5
 
 
 def main():
@@ -25,30 +20,12 @@ def cli(it, out, err):
     tracks = map(parse_foobar_clipboard, lines)
     by_artist_album = dict_groupby(tracks, lambda t: (t.artist, t.album), mapping=OrderedDict)
 
-    q = Queue()
-    threads = []
-    for _ in range(WORKERS):
-        th = quickthread(worker, q)
-        threads.append(th)
-
-    deferreds = []
-    try:
-        for (artist, album), tracks in by_artist_album.items():
-            deferred = Queue(1)
-            q.put((tracks, deferred))
-            deferreds.append((artist, album, deferred))
-            time.sleep(1)
-    finally:
-        for _ in range(WORKERS):
-            q.put(None)
-
-    for artist, album, deferred in deferreds:
-        release, release_with_recordings, e = deferred.get()
-        if e is not None:
-            raise e
+    for (artist, album), tracks in by_artist_album.items():
+        release = pick_release(tracks)
         if release is None:
             print('ERROR: nothing found for {} - {}'.format(artist, album), file=err)
             continue
+        release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
         tags = release.get('tag-list', None)
         print('{} - {} {}'.format(release['artist-credit-phrase'], release['date'], release['title']),
               end='' if tags else None, file=err)
@@ -57,9 +34,6 @@ def cli(it, out, err):
         for medium in release_with_recordings['release']['medium-list']:
             for track in medium['track-list']:
                 print(fix_quote(track['recording']['title']), file=out)
-
-    for th in threads:
-        th.join()
 
 
 def parse_foobar_clipboard(line):
@@ -92,35 +66,6 @@ def dict_groupby(iterable, key, mapping=dict):
     for item in iterable:
         result.setdefault(key(item), []).append(item)
     return result
-
-
-def quickthread(fn, *args, **kwargs):
-    name = kwargs.pop('__name', None)
-    th = threading.Thread(
-        name=name,
-        target=fn,
-        args=args,
-        kwargs=kwargs)
-    th.daemon = True
-    th.start()
-    return th
-
-
-def worker(q):
-    while True:
-        try:
-            task = q.get()
-            if task is None:
-                break
-            tracks, deferred = task
-            release = pick_release(tracks)
-            if release is None:
-                deferred.put((None, None, None))
-                continue
-            release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
-            deferred.put((release, release_with_recordings, None))
-        except Exception as e:
-            deferred.put((None, None, e))
 
 
 def pick_release(tracks):
