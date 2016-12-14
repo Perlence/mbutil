@@ -1,10 +1,14 @@
 from collections import OrderedDict, namedtuple
 from itertools import groupby
+from queue import Queue
 import re
+import threading
 import sys
 
 import musicbrainzngs as mb
 from titlecase import titlecase
+
+WORKERS = 5
 
 
 def main():
@@ -19,17 +23,36 @@ def cli(it, out, err):
     lines = list(it)
     tracks = map(parse_foobar_clipboard, lines)
     by_artist_album = dict_groupby(tracks, lambda t: (t.artist, t.album), mapping=OrderedDict)
-    for (artist, album), tracks in by_artist_album.items():
-        release = pick_release(tracks, err)
+
+    q = Queue()
+    threads = []
+    for _ in range(WORKERS):
+        th = quickthread(worker, q)
+        threads.append(th)
+
+    deferreds = []
+    try:
+        for tracks in by_artist_album.values():
+            deferred = Queue(1)
+            q.put((tracks, deferred))
+            deferreds.append(deferred)
+    finally:
+        for _ in range(WORKERS):
+            q.put(None)
+
+    for deferred in deferreds:
+        release, release_with_recordings = deferred.get()
         tags = release.get('tag-list', None)
         print('{} - {} {}'.format(release['artist-credit-phrase'], release['date'], release['title']),
               end='' if tags else None, file=err)
         if tags:
             print(': ' + '; '.join(titlecase(tag['name']) for tag in release['tag-list']), file=err)
-        release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
         for medium in release_with_recordings['release']['medium-list']:
             for track in medium['track-list']:
                 print(fix_quote(track['recording']['title']), file=out)
+
+    for th in threads:
+        th.join()
 
 
 def parse_foobar_clipboard(line):
@@ -64,7 +87,30 @@ def dict_groupby(iterable, key, mapping=dict):
     return result
 
 
-def pick_release(tracks, err):
+def quickthread(fn, *args, **kwargs):
+    name = kwargs.pop('__name', None)
+    th = threading.Thread(
+        name=name,
+        target=fn,
+        args=args,
+        kwargs=kwargs)
+    th.daemon = True
+    th.start()
+    return th
+
+
+def worker(q):
+    while True:
+        task = q.get()
+        if task is None:
+            break
+        tracks, deferred = task
+        release = pick_release(tracks)
+        release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
+        deferred.put((release, release_with_recordings))
+
+
+def pick_release(tracks):
     cdc = cd_count(tracks)
     tcs = track_counts(tracks)
     track = tracks[0]

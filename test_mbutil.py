@@ -31,14 +31,14 @@ def test_track_counts(metallica_tracks, kendrick_tracks):
     assert mbutil.track_counts(kendrick_tracks) == (14,)
 
 
-def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw_tracks, kendrick_tracks):
+def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw_tracks, kendrick_tracks, custom_vcr):
     table = [
         (metallica_raw_tracks, metallica_tracks,
          'Metallica - 1998-11-24 Garage Inc.: Rock; Heavy Metal; Thrash Metal; Metal; Hard Rock'),
         (kendrick_raw_tracks, kendrick_tracks,
          'Kendrick Lamar - 2013-07-19 good kid, m.A.A.d city'),
     ]
-    with vcr.use_cassette('fixtures/musicbrainz.yaml', record_mode='once'):
+    with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
         for raw_tracks, tracks, artist_album in table:
             out = io.StringIO()
             err = io.StringIO()
@@ -51,18 +51,29 @@ def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw
     raw_tracks.insert(0, metallica_raw_tracks[0])
     out = io.StringIO()
     err = io.StringIO()
-    with vcr.use_cassette('fixtures/musicbrainz.yaml', record_mode='once'):
+    with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
         mbutil.cli(iter(raw_tracks), out, err)
     for _, _, artist_album in table:
         assert artist_album in err.getvalue().splitlines()
     assert (out.getvalue().splitlines() ==
             list(track.title for track in metallica_tracks + kendrick_tracks)), \
-        'Tracks must be listed on order of album appearence in stdin'
+        'Tracks must be listed in order of album appearence in stdin'
 
 
 @pytest.fixture
 def set_useragent():
     mb.set_useragent('mbutil', '0.1', 'https://github.com/Perlence/mbutil')
+
+
+@pytest.fixture
+def custom_vcr():
+    def unordered_query(r1, r2):
+        return dict(r1.query) == dict(r2.query)
+    v = vcr.VCR()
+    v.register_matcher('unordered_query', unordered_query)
+    v.match_on = ['method', 'scheme', 'host', 'port', 'path', 'unordered_query']
+    v.before_record_request
+    return v
 
 
 @pytest.fixture
@@ -125,4 +136,23 @@ Kendrick Lamar - [good kid, m.A.A.d city #11] Real
 Kendrick Lamar - [good kid, m.A.A.d city #12] Compton
 Kendrick Lamar - [good kid, m.A.A.d city #13] Bitch, Don't Kill My Vibe (remix)
 Kendrick Lamar - [good kid, m.A.A.d city #14] Bitch, Don't Kill My Vibe (International remix)
+""".splitlines()
+
+
+@pytest.fixture
+def tool_raw_tracks():
+    return """\
+Tool - [Lateralus #1] The Grudge
+Tool - [Lateralus #2] Eon Blue Apocalypse
+Tool - [Lateralus #3] The Patient
+Tool - [Lateralus #4] Mantra
+Tool - [Lateralus #5] Schism
+Tool - [Lateralus #6] Parabol
+Tool - [Lateralus #7] Parabola
+Tool - [Lateralus #8] Ticks & Leeches
+Tool - [Lateralus #9] Lateralus
+Tool - [Lateralus #10] Disposition
+Tool - [Lateralus #11] Reflection
+Tool - [Lateralus #12] Triad
+Tool - [Lateralus #13] Faaip de Oiad
 """.splitlines()
