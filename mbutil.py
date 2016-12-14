@@ -3,6 +3,7 @@ from itertools import groupby
 from queue import Queue
 import re
 import threading
+import time
 import sys
 
 import musicbrainzngs as mb
@@ -36,6 +37,7 @@ def cli(it, out, err):
             deferred = Queue(1)
             q.put((tracks, deferred))
             deferreds.append((artist, album, deferred))
+            time.sleep(1)
     finally:
         for _ in range(WORKERS):
             q.put(None)

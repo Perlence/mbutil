@@ -53,7 +53,8 @@ docs/_build/
 # PyBuilder
 target/
 
-tags
+.envrc
 Session.vim
+tags
 
 py35/
