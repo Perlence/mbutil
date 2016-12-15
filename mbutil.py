@@ -1,4 +1,4 @@
-from collections import OrderedDict, namedtuple
+from collections import OrderedDict, namedtuple, defaultdict
 from itertools import groupby
 import re
 import sys
@@ -20,18 +20,14 @@ def cli(it, out, err):
     parsed_tracks = list(map(parse_foobar_clipboard, lines))
     track_dict_by_artist_album = dict_groupby(parsed_tracks, lambda t: (t.artist, t.album), mapping=OrderedDict)
     tracks_by_artist_album = groupby(parsed_tracks, lambda t: (t.artist, t.album))
-
-    cache = {}  # {(artist, album): (release, release_with_recordings)}
-    indexed_tracks = {}  # {(artist, album, discnumber, tracknumber): mbtrack}
-
+    indexed_tracks = defaultdict(dict)  # {(artist, album): {(discnumber, tracknumber): mbtrack}}
     for (artist, album), track_iter in tracks_by_artist_album:
-        if (artist, album) not in cache:
+        if (artist, album) not in indexed_tracks:
             release = pick_release(track_dict_by_artist_album[(artist, album)])
             if release is None:
                 print('ERROR: nothing found for {} - {}'.format(artist, album), file=err)
                 continue
             release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
-            cache[(artist, album)] = (release, release_with_recordings)
 
             # Print brief album information
             tags = release.get('tag-list')
@@ -43,10 +39,10 @@ def cli(it, out, err):
             # Index received tracks
             for discnumber, medium in enumerate(release_with_recordings['release']['medium-list'], start=1):
                 for tracknumber, mbtrack in enumerate(medium['track-list'], start=1):
-                    indexed_tracks[(artist, album, discnumber, tracknumber)] = mbtrack
+                    indexed_tracks[(artist, album)][(discnumber, tracknumber)] = mbtrack
 
         for track in track_iter:
-            mbtrack = indexed_tracks[(artist, album, track.discnumber or 1, track.track)]
+            mbtrack = indexed_tracks[(artist, album)][(track.discnumber or 1, track.track)]
             print(fix_quote(mbtrack['recording']['title']), file=out)
 
 
