@@ -17,23 +17,37 @@ def main():
 
 def cli(it, out, err):
     lines = list(it)
-    tracks = map(parse_foobar_clipboard, lines)
-    by_artist_album = dict_groupby(tracks, lambda t: (t.artist, t.album), mapping=OrderedDict)
+    parsed_tracks = list(map(parse_foobar_clipboard, lines))
+    track_dict_by_artist_album = dict_groupby(parsed_tracks, lambda t: (t.artist, t.album), mapping=OrderedDict)
+    tracks_by_artist_album = groupby(parsed_tracks, lambda t: (t.artist, t.album))
 
-    for (artist, album), tracks in by_artist_album.items():
-        release = pick_release(tracks)
-        if release is None:
-            print('ERROR: nothing found for {} - {}'.format(artist, album), file=err)
-            continue
-        release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
-        tags = release.get('tag-list', None)
-        print('{} - {} {}'.format(release['artist-credit-phrase'], release['date'], release['title']),
-              end='' if tags else None, file=err)
-        if tags:
-            print(': ' + '; '.join(titlecase(tag['name']) for tag in release['tag-list']), file=err)
-        for medium in release_with_recordings['release']['medium-list']:
-            for track in medium['track-list']:
-                print(fix_quote(track['recording']['title']), file=out)
+    cache = {}  # {(artist, album): (release, release_with_recordings)}
+    indexed_tracks = {}  # {(artist, album, discnumber, tracknumber): mbtrack}
+
+    for (artist, album), track_iter in tracks_by_artist_album:
+        if (artist, album) not in cache:
+            release = pick_release(track_dict_by_artist_album[(artist, album)])
+            if release is None:
+                print('ERROR: nothing found for {} - {}'.format(artist, album), file=err)
+                continue
+            release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
+            cache[(artist, album)] = (release, release_with_recordings)
+
+            # Print brief album information
+            tags = release.get('tag-list')
+            print('{} - {} {}'.format(release['artist-credit-phrase'], release['date'], release['title']),
+                  end='' if tags else None, file=err)
+            if tags:
+                print(': ' + '; '.join(titlecase(tag['name']) for tag in release['tag-list']), file=err)
+
+            # Index received tracks
+            for discnumber, medium in enumerate(release_with_recordings['release']['medium-list'], start=1):
+                for tracknumber, mbtrack in enumerate(medium['track-list'], start=1):
+                    indexed_tracks[(artist, album, discnumber, tracknumber)] = mbtrack
+
+        for track in track_iter:
+            mbtrack = indexed_tracks[(artist, album, track.discnumber or 1, track.track)]
+            print(fix_quote(mbtrack['recording']['title']), file=out)
 
 
 def parse_foobar_clipboard(line):
@@ -95,7 +109,8 @@ def cd_count(tracks):
 
 
 def track_counts(tracks):
-    groups = groupby(tracks, lambda t: t.discnumber or 1)
+    key = lambda t: t.discnumber or 1  # noqa
+    groups = groupby(sorted(tracks, key=key), key=key)
     return tuple(len(list(ts)) for _, ts in groups)
 
 

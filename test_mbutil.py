@@ -30,6 +30,11 @@ def test_track_counts(metallica_tracks, kendrick_tracks):
     assert mbutil.track_counts(metallica_tracks) == (11, 16)
     assert mbutil.track_counts(kendrick_tracks) == (14,)
 
+    shuffled_metallica_tracks = metallica_tracks[:]
+    random.shuffle(shuffled_metallica_tracks)
+    assert mbutil.track_counts(shuffled_metallica_tracks) == (11, 16), \
+        'Track counts must be correct even if tracks are unordered'
+
 
 def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw_tracks, kendrick_tracks, custom_vcr):
     table = [
@@ -54,8 +59,8 @@ def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw
     with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
         mbutil.cli(iter(raw_tracks), out, err)
     assert err.getvalue().splitlines() == [artist_album for _, _, artist_album in table]
-    assert (out.getvalue().splitlines() == list(track.title for track in metallica_tracks + kendrick_tracks)), \
-        'Tracks must be listed in order of album appearence in stdin'
+    assert out.getvalue().splitlines() == [mbutil.parse_foobar_clipboard(raw_track).title for raw_track in raw_tracks], \
+        'Tracks must be listed in order of their appearance in stdin'
 
     out = io.StringIO()
     err = io.StringIO()
@@ -74,6 +79,16 @@ def set_useragent():
 def custom_vcr():
     def unordered_query(r1, r2):
         return dict(r1.query) == dict(r2.query)
+        # if len(r1.query) != len(r2.query):
+        #     return False
+        # query = r2.query[:]
+        # for pair in r1.query:
+        #     try:
+        #         query.remove(pair)
+        #     except ValueError:
+        #         return False
+        # print(r1.query, r2.query, query)
+        # return not query
     v = vcr.VCR()
     v.register_matcher('unordered_query', unordered_query)
     v.match_on = ['method', 'scheme', 'host', 'port', 'path', 'unordered_query']
