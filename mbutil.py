@@ -6,6 +6,8 @@ import sys
 import musicbrainzngs as mb
 from titlecase import titlecase
 
+MIN_SCORE = 80
+
 
 def main():
     mb.set_useragent('mbutil', '0.1', 'https://github.com/Perlence/mbutil')
@@ -79,32 +81,29 @@ def dict_groupby(iterable, key, mapping=dict):
 
 
 def pick_release(tracks):
-    cdc = cd_count(tracks)
-    tcs = track_counts(tracks)
+    tracks_on_cds = track_counts(tracks)
+    cd_count = len(tracks_on_cds)
     track = tracks[0]
     search_results = mb.search_releases(artist=track.artist, release=track.album, limit=10)
     for release in search_results['release-list']:
-        # Search score must be at least 80
-        if int(release['ext:score']) < 80:
+        # Search score must be at least MIN_SCORE
+        if int(release['ext:score']) < MIN_SCORE:
             break
 
         # Number of CDs must match
-        if release['medium-count'] != cdc:
+        if release['medium-count'] != cd_count:
             continue
 
         # Number of tracks in each CD must match
-        if not all(medium['track-count'] == track_count
-                   for medium, track_count in zip(release['medium-list'], tcs)):
+        if not tuple(m['track-count'] for m in release['medium-list']) == tracks_on_cds:
             continue
 
         return release
 
 
-def cd_count(tracks):
-    return max(track.discnumber or 1 for track in tracks)
-
-
 def track_counts(tracks):
+    """Find out how many CDs and tracks on each CD in the given list of
+    *tracks*."""
     key = lambda t: t.discnumber or 1  # noqa
     groups = groupby(sorted(tracks, key=key), key=key)
     return tuple(len(list(ts)) for _, ts in groups)

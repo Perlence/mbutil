@@ -21,11 +21,6 @@ def test_dict_groupby():
     assert mbutil.dict_groupby(range(10), lambda x: x % 2) == {0: [0, 2, 4, 6, 8], 1: [1, 3, 5, 7, 9]}
 
 
-def test_cd_count(metallica_tracks, kendrick_tracks):
-    assert mbutil.cd_count(metallica_tracks) == 2
-    assert mbutil.cd_count(kendrick_tracks) == 1
-
-
 def test_track_counts(metallica_tracks, kendrick_tracks):
     assert mbutil.track_counts(metallica_tracks) == (11, 16)
     assert mbutil.track_counts(kendrick_tracks) == (14,)
