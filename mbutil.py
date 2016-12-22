@@ -31,12 +31,7 @@ def cli(it, out, err):
                 continue
             release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
 
-            # Print brief album information
-            tags = release.get('tag-list')
-            print('{} - {} {}'.format(release['artist-credit-phrase'], release['date'], release['title']),
-                  end='' if tags else None, file=err)
-            if tags:
-                print(': ' + '; '.join(titlecase(tag['name']) for tag in release['tag-list']), file=err)
+            print(album_information(release), file=err)
 
             # Index received tracks
             for discnumber, medium in enumerate(release_with_recordings['release']['medium-list'], start=1):
@@ -107,6 +102,18 @@ def track_counts(tracks):
     key = lambda t: t.discnumber or 1  # noqa
     groups = groupby(sorted(tracks, key=key), key=key)
     return tuple(len(list(ts)) for _, ts in groups)
+
+
+def album_information(release):
+    """Format one-line album information."""
+    tags = release.get('tag-list')
+    result = '{artist-credit-phrase} - '.format(**release)
+    if 'date' in release:
+        result += '{date} '.format(**release)
+    result += '{title}'.format(**release)
+    if tags:
+        result += ': ' + '; '.join(titlecase(tag['name']) for tag in release['tag-list'])
+    return result
 
 
 def fix_quote(s):

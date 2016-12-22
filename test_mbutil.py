@@ -31,6 +31,14 @@ def test_track_counts(metallica_tracks, kendrick_tracks):
         'Track counts must be correct even if tracks are unordered'
 
 
+def test_album_information():
+    release = {
+        'artist-credit-phrase': 'Yyrkoon',
+        'title': 'Dying Sun',
+    }
+    assert mbutil.album_information(release) == 'Yyrkoon - Dying Sun'
+
+
 def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw_tracks, kendrick_tracks, custom_vcr):
     table = [
         (metallica_raw_tracks, metallica_tracks,
