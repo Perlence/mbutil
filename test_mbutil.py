@@ -39,7 +39,7 @@ def test_album_information():
     assert mbutil.album_information(release) == 'Yyrkoon - Dying Sun'
 
 
-def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw_tracks, kendrick_tracks, custom_vcr):
+def test_cli_tracks(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw_tracks, kendrick_tracks, custom_vcr):
     table = [
         (metallica_raw_tracks, metallica_tracks,
          'Metallica - 1998-11-24 Garage Inc.: Rock; Heavy Metal; Thrash Metal; Metal; Hard Rock'),
@@ -50,7 +50,7 @@ def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw
         for raw_tracks, tracks, artist_album in table:
             out = io.StringIO()
             err = io.StringIO()
-            mbutil.cli(iter(raw_tracks), out, err)
+            mbutil.cli([], iter(raw_tracks), out, err)
             assert err.getvalue().splitlines() == [artist_album]
             assert out.getvalue().splitlines() == list(track.title for track in tracks)
 
@@ -60,7 +60,7 @@ def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw
     out = io.StringIO()
     err = io.StringIO()
     with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
-        mbutil.cli(iter(raw_tracks), out, err)
+        mbutil.cli([], iter(raw_tracks), out, err)
     assert err.getvalue().splitlines() == [artist_album for _, _, artist_album in table]
     assert out.getvalue().splitlines() == [mbutil.parse_foobar_clipboard(raw_track).title for raw_track in raw_tracks], \
         'Tracks must be listed in order of their appearance in stdin'
@@ -68,9 +68,20 @@ def test_cli(set_useragent, metallica_raw_tracks, metallica_tracks, kendrick_raw
     out = io.StringIO()
     err = io.StringIO()
     with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
-        mbutil.cli(iter(['sfaluijhfsdkjlhfs - [vnielwslcns] ierkjifdnhajk']), out, err)
+        mbutil.cli([], iter(['sfaluijhfsdkjlhfs - [vnielwslcns] ierkjifdnhajk']), out, err)
     assert (err.getvalue().splitlines() == ['ERROR: nothing found for sfaluijhfsdkjlhfs - vnielwslcns']), \
         'Must print error message if no releases were found'
+
+
+def test_cli_artists(set_useragent, kanye_raw_tracks, kanye_artists, custom_vcr):
+    out = io.StringIO()
+    err = io.StringIO()
+    with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
+        mbutil.cli(['--artist'], iter(kanye_raw_tracks), out, err)
+    print(out.getvalue())
+    print(err.getvalue())
+    assert out.getvalue().splitlines() == kanye_artists
+    assert err.getvalue().splitlines() == ['Kanye West - 2005-09-21 The College Dropout']
 
 
 @pytest.fixture
@@ -177,4 +188,60 @@ Tool - [Lateralus #10] Disposition
 Tool - [Lateralus #11] Reflection
 Tool - [Lateralus #12] Triad
 Tool - [Lateralus #13] Faaip de Oiad
+""".splitlines()
+
+
+@pytest.fixture
+def kanye_raw_tracks():
+    return """\
+Kanye West - [The College Dropout #01] Intro
+Kanye West - [The College Dropout #02] We Don't Care
+Kanye West - [The College Dropout #03] Graduation Day
+Kanye West - [The College Dropout #04] All Falls Down
+Kanye West - [The College Dropout #05] I'll Fly Away
+Kanye West - [The College Dropout #06] Spaceship
+Kanye West - [The College Dropout #07] Jesus Walks
+Kanye West - [The College Dropout #08] Never Let Me Down
+Kanye West - [The College Dropout #09] Get Em High
+Kanye West - [The College Dropout #10] Workout Plan
+Kanye West - [The College Dropout #11] The New Workout Plan
+Kanye West - [The College Dropout #12] Slow Jamz
+Kanye West - [The College Dropout #13] Breathe In Breathe Out
+Kanye West - [The College Dropout #14] School Spirit (skit 1)
+Kanye West - [The College Dropout #15] School Spirit
+Kanye West - [The College Dropout #16] School Spirit (skit 2)
+Kanye West - [The College Dropout #17] Lil Jimmy (skit)
+Kanye West - [The College Dropout #18] Two Words
+Kanye West - [The College Dropout #19] Through the Wire
+Kanye West - [The College Dropout #20] Family Business
+Kanye West - [The College Dropout #21] Last Call
+Kanye West - [The College Dropout #22] Heavy Hitters
+""".splitlines()
+
+
+@pytest.fixture
+def kanye_artists():
+    return """\
+Kanye West
+Kanye West
+Kanye West
+Kanye West; Syleena Johnson
+Kanye West
+Kanye West; GLC; Consequence
+Kanye West
+Kanye West; JAY-Z; J. Ivy
+Kanye West; Talib Kweli; Common
+Kanye West
+Kanye West
+Kanye West; Twista; Jamie Foxx
+Kanye West; Ludacris
+Kanye West
+Kanye West
+Kanye West
+Kanye West
+Kanye West; Mos Def; Freeway; The Boys Choir of Harlem
+Kanye West
+Kanye West
+Kanye West
+Kanye West; GLC
 """.splitlines()

@@ -1,7 +1,8 @@
-from collections import OrderedDict, namedtuple, defaultdict
-from itertools import groupby
 import re
 import sys
+from argparse import ArgumentParser
+from collections import OrderedDict, namedtuple, defaultdict
+from itertools import groupby
 
 import musicbrainzngs as mb
 from titlecase import titlecase
@@ -12,13 +13,23 @@ MIN_SCORE = 80
 def main():
     mb.set_useragent('mbutil', '0.1', 'https://github.com/Perlence/mbutil')
     try:
-        cli(iter(sys.stdin), sys.stdout, sys.stderr)
+        cli(sys.argv[1:], iter(sys.stdin), sys.stdout, sys.stderr)
     except KeyboardInterrupt:
         sys.exit(0)
 
 
-def cli(it, out, err):
-    lines = list(it)
+def cli(args, stdin, stdout, stderr):
+    parser = ArgumentParser()
+    parser.add_argument('-a', '--artist', action='store_true', help='Output artist names.')
+    args = parser.parse_args(args)
+    if args.artist:
+        release_includes = ['recordings', 'artist-credits']
+        track_handler = get_artists
+    else:
+        release_includes = ['recordings']
+        track_handler = get_title
+
+    lines = list(stdin)
     parsed_tracks = list(map(parse_foobar_clipboard, lines))
     track_dict_by_artist_album = dict_groupby(parsed_tracks, lambda t: (t.artist, t.album), mapping=OrderedDict)
     tracks_by_artist_album = groupby(parsed_tracks, lambda t: (t.artist, t.album))
@@ -27,11 +38,11 @@ def cli(it, out, err):
         if (artist, album) not in indexed_tracks:
             release = pick_release(track_dict_by_artist_album[(artist, album)])
             if release is None:
-                print('ERROR: nothing found for {} - {}'.format(artist, album), file=err)
+                print('ERROR: nothing found for {} - {}'.format(artist, album), file=stderr)
                 continue
-            release_with_recordings = mb.get_release_by_id(release['id'], includes=['recordings'])
+            release_with_recordings = mb.get_release_by_id(release['id'], includes=release_includes)
 
-            print(album_information(release), file=err)
+            print(album_information(release), file=stderr)
 
             # Index received tracks
             for discnumber, medium in enumerate(release_with_recordings['release']['medium-list'], start=1):
@@ -40,7 +51,7 @@ def cli(it, out, err):
 
         for track in track_iter:
             mbtrack = indexed_tracks[(artist, album)][(track.discnumber or 1, track.track)]
-            print(fix_quote(mbtrack['recording']['title']), file=out)
+            print(track_handler(mbtrack), file=stdout)
 
 
 def parse_foobar_clipboard(line):
@@ -114,6 +125,16 @@ def album_information(release):
     if tags:
         result += ': ' + '; '.join(titlecase(tag['name']) for tag in release['tag-list'])
     return result
+
+
+def get_title(mbtrack):
+    return fix_quote(mbtrack['recording']['title'])
+
+
+def get_artists(mbtrack):
+    credits = mbtrack['artist-credit']
+    artist_names = [part['artist']['name'] for part in credits if isinstance(part, dict)]
+    return '; '.join(artist_names)
 
 
 def fix_quote(s):

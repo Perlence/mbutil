@@ -2,15 +2,20 @@ interactions:
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-14T13:39:00.011Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -146,31 +151,48 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Wed, 14 Dec 2016 14:09:22 GMT']
-      Last-Modified: ['Wed, 14 Dec 2016 13:39:00 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['536']
-      X-RateLimit-Reset: ['1481724563']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Wed, 14 Dec 2016 14:09:22 GMT
+      Last-Modified:
+      - Wed, 14 Dec 2016 13:39:00 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '536'
+      X-RateLimit-Reset:
+      - '1481724563'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/7f5a52aa-4429-4771-80ec-6c6a545b0df9?inc=recordings
   response:
-    body: {string: '<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#"><release
+    body:
+      string: '<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#"><release
         id="7f5a52aa-4429-4771-80ec-6c6a545b0df9"><title>Garage Inc.</title><status
         id="4e304316-386d-3409-af2e-78857eec5cfe">Official</status><quality>normal</quality><text-representation><language>eng</language><script>Latn</script></text-representation><date>1998-11-24</date><country>US</country><release-event-list
         count="1"><release-event><date>1998-11-24</date><area id="489ce91b-6658-3307-9877-795b68554c98"><name>United
@@ -232,37 +254,54 @@ interactions:
         id="5129af19-8c59-3b65-a5ae-a531442e8560"><position>15</position><number>15</number><length>291933</length><recording
         id="b6f1d137-cfc6-4198-b4f0-ebb6756b18ca"><title>Stone Dead Forever</title><length>292000</length></recording></track><track
         id="d9e0f60d-bbaa-3c2e-9442-ee5c2f0a9426"><position>16</position><number>16</number><length>192200</length><recording
-        id="30ce590a-696a-4a78-8fea-14eb87c7149c"><title>Too Late Too Late</title><length>192200</length></recording></track></track-list></medium></medium-list></release></metadata>'}
+        id="30ce590a-696a-4a78-8fea-14eb87c7149c"><title>Too Late Too Late</title><length>192200</length></recording></track></track-list></medium></medium-list></release></metadata>'
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Length: ['7745']
-      Content-Type: [application/xml; charset=utf-8]
-      Date: ['Wed, 14 Dec 2016 14:09:23 GMT']
-      ETag: ['"6a9042c73e6c2b0d0c91fe2cd15ba1d7"']
-      Server: ['Plack::Handler::Starlet']
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['234']
-      X-RateLimit-Reset: ['1481724563']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Length:
+      - '7745'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Date:
+      - Wed, 14 Dec 2016 14:09:23 GMT
+      ETag:
+      - '"6a9042c73e6c2b0d0c91fe2cd15ba1d7"'
+      Server:
+      - Plack::Handler::Starlet
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '234'
+      X-RateLimit-Reset:
+      - '1481724563'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
   response:
-    body: {string: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata
-        created="2016-12-14T13:39:00.011Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#"
-        xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list count="10916"
-        offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9" ext:score="100"><title>good
-        kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes Deluxe
-        Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+    body:
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-14T13:39:00.011Z"
+        xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list
+        count="10916" offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9"
+        ext:score="100"><title>good kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes
+        Deluxe Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
         id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
         Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
         Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
@@ -409,31 +448,48 @@ interactions:
         id="ef1b7cc0-cd26-36f4-8ea0-04d9623786c7"><name>Netherlands</name><sort-name>Netherlands</sort-name><iso-3166-1-code-list><iso-3166-1-code>NL</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537439430</barcode><asin>B00D3LOJ6O</asin><label-info-list><label-info><catalog-number>0602537439430</catalog-number><label
         id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info></label-info-list><medium-list
         count="1"><track-count>14</track-count><medium><format>CD</format><disc-list
-        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>'}
+        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Wed, 14 Dec 2016 14:09:29 GMT']
-      Last-Modified: ['Wed, 14 Dec 2016 13:39:00 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['258']
-      X-RateLimit-Reset: ['1481724569']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Wed, 14 Dec 2016 14:09:29 GMT
+      Last-Modified:
+      - Wed, 14 Dec 2016 13:39:00 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '258'
+      X-RateLimit-Reset:
+      - '1481724569'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/48415b02-026d-49e8-8daf-e0c6c0e6836f?inc=recordings
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><metadata xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"><release
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><metadata xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"><release
         id=\"48415b02-026d-49e8-8daf-e0c6c0e6836f\"><title>good kid, m.A.A.d city</title><status
         id=\"4e304316-386d-3409-af2e-78857eec5cfe\">Official</status><quality>normal</quality><packaging
         id=\"ec27701a-4a22-37f4-bfac-6616e0f9750a\">Jewel Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><date>2013-07-19</date><country>DE</country><release-event-list
@@ -469,58 +525,93 @@ interactions:
         id=\"af3c6239-d09d-4978-8e2b-e5115a7dd6dc\"><title>Bitch, Don\u2019t Kill
         My Vibe (remix)</title><length>279533</length></recording></track><track id=\"9ca66e0f-2cce-404a-bdce-3ed51a9ab91c\"><position>14</position><number>14</number><length>305826</length><recording
         id=\"8b42f0b5-7594-424b-93eb-0a418232b10f\"><title>Bitch, Don\u2019t Kill
-        My Vibe (International remix)</title><length>305826</length></recording></track></track-list></medium></medium-list></release></metadata>"}
+        My Vibe (International remix)</title><length>305826</length></recording></track></track-list></medium></medium-list></release></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Length: ['4854']
-      Content-Type: [application/xml; charset=utf-8]
-      Date: ['Wed, 14 Dec 2016 14:09:34 GMT']
-      ETag: ['"d1d73666fbfb7440e416a900eeff86d6"']
-      Server: ['Plack::Handler::Starlet']
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['449']
-      X-RateLimit-Reset: ['1481724575']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Length:
+      - '4854'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Date:
+      - Wed, 14 Dec 2016 14:09:34 GMT
+      ETag:
+      - '"d1d73666fbfb7440e416a900eeff86d6"'
+      Server:
+      - Plack::Handler::Starlet
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '449'
+      X-RateLimit-Reset:
+      - '1481724575'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28vnielwslcns%29+artist%3A%28sfaluijhfsdkjlhfs%29
   response:
-    body: {string: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata
-        created="2016-12-14T13:39:00.011Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#"
-        xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list count="0" offset="0"/></metadata>'}
+    body:
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-14T13:39:00.011Z"
+        xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list
+        count="0" offset="0"/></metadata>
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Wed, 14 Dec 2016 14:09:39 GMT']
-      Last-Modified: ['Wed, 14 Dec 2016 13:39:00 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['360']
-      X-RateLimit-Reset: ['1481724579']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Wed, 14 Dec 2016 14:09:39 GMT
+      Last-Modified:
+      - Wed, 14 Dec 2016 13:39:00 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '360'
+      X-RateLimit-Reset:
+      - '1481724579'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T05:48:08.057Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -656,36 +747,52 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:39:07 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 05:48:08 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['575']
-      X-RateLimit-Reset: ['1481783949']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:39:07 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 05:48:08 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '575'
+      X-RateLimit-Reset:
+      - '1481783949'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
   response:
-    body: {string: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata
-        created="2016-12-15T05:48:08.057Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#"
-        xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list count="10922"
-        offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9" ext:score="100"><title>good
-        kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes Deluxe
-        Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+    body:
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T05:48:08.057Z"
+        xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list
+        count="10922" offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9"
+        ext:score="100"><title>good kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes
+        Deluxe Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
         id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
         Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
         Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
@@ -832,31 +939,48 @@ interactions:
         id="ef1b7cc0-cd26-36f4-8ea0-04d9623786c7"><name>Netherlands</name><sort-name>Netherlands</sort-name><iso-3166-1-code-list><iso-3166-1-code>NL</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537439430</barcode><asin>B00D3LOJ6O</asin><label-info-list><label-info><catalog-number>0602537439430</catalog-number><label
         id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info></label-info-list><medium-list
         count="1"><track-count>14</track-count><medium><format>CD</format><disc-list
-        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>'}
+        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:39:08 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 05:48:08 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['358']
-      X-RateLimit-Reset: ['1481783949']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:39:08 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 05:48:08 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '358'
+      X-RateLimit-Reset:
+      - '1481783949'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T05:48:08.057Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -992,36 +1116,52 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:39:11 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 05:48:08 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['603']
-      X-RateLimit-Reset: ['1481783953']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:39:11 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 05:48:08 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '603'
+      X-RateLimit-Reset:
+      - '1481783953'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
   response:
-    body: {string: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata
-        created="2016-12-15T05:48:08.057Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#"
-        xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list count="10922"
-        offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9" ext:score="100"><title>good
-        kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes Deluxe
-        Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+    body:
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T05:48:08.057Z"
+        xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list
+        count="10922" offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9"
+        ext:score="100"><title>good kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes
+        Deluxe Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
         id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
         Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
         Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
@@ -1168,31 +1308,48 @@ interactions:
         id="ef1b7cc0-cd26-36f4-8ea0-04d9623786c7"><name>Netherlands</name><sort-name>Netherlands</sort-name><iso-3166-1-code-list><iso-3166-1-code>NL</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537439430</barcode><asin>B00D3LOJ6O</asin><label-info-list><label-info><catalog-number>0602537439430</catalog-number><label
         id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info></label-info-list><medium-list
         count="1"><track-count>14</track-count><medium><format>CD</format><disc-list
-        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>'}
+        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:39:12 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 05:48:08 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['365']
-      X-RateLimit-Reset: ['1481783953']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:39:12 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 05:48:08 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '365'
+      X-RateLimit-Reset:
+      - '1481783953'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T05:48:08.057Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -1328,36 +1485,52 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:39:15 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 05:48:08 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['592']
-      X-RateLimit-Reset: ['1481783957']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:39:15 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 05:48:08 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '592'
+      X-RateLimit-Reset:
+      - '1481783957'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
   response:
-    body: {string: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata
-        created="2016-12-15T06:19:03.700Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#"
-        xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list count="10922"
-        offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9" ext:score="100"><title>good
-        kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes Deluxe
-        Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+    body:
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T06:19:03.700Z"
+        xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list
+        count="10922" offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9"
+        ext:score="100"><title>good kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes
+        Deluxe Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
         id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
         Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
         Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
@@ -1504,31 +1677,48 @@ interactions:
         id="ef1b7cc0-cd26-36f4-8ea0-04d9623786c7"><name>Netherlands</name><sort-name>Netherlands</sort-name><iso-3166-1-code-list><iso-3166-1-code>NL</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537439430</barcode><asin>B00D3LOJ6O</asin><label-info-list><label-info><catalog-number>0602537439430</catalog-number><label
         id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info></label-info-list><medium-list
         count="1"><track-count>14</track-count><medium><format>CD</format><disc-list
-        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>'}
+        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:39:20 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['420']
-      X-RateLimit-Reset: ['1481783957']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:39:20 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '420'
+      X-RateLimit-Reset:
+      - '1481783957'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T06:19:03.700Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -1664,36 +1854,52 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:39:31 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['427']
-      X-RateLimit-Reset: ['1481783963']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:39:31 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '427'
+      X-RateLimit-Reset:
+      - '1481783963'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
   response:
-    body: {string: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata
-        created="2016-12-15T05:48:08.057Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#"
-        xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list count="10922"
-        offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9" ext:score="100"><title>good
-        kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes Deluxe
-        Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+    body:
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T05:48:08.057Z"
+        xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list
+        count="10922" offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9"
+        ext:score="100"><title>good kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes
+        Deluxe Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
         id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
         Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
         Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
@@ -1840,31 +2046,48 @@ interactions:
         id="ef1b7cc0-cd26-36f4-8ea0-04d9623786c7"><name>Netherlands</name><sort-name>Netherlands</sort-name><iso-3166-1-code-list><iso-3166-1-code>NL</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537439430</barcode><asin>B00D3LOJ6O</asin><label-info-list><label-info><catalog-number>0602537439430</catalog-number><label
         id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info></label-info-list><medium-list
         count="1"><track-count>14</track-count><medium><format>CD</format><disc-list
-        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>'}
+        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:39:31 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 05:48:08 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['656']
-      X-RateLimit-Reset: ['1481783973']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:39:31 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 05:48:08 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '656'
+      X-RateLimit-Reset:
+      - '1481783973'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T06:19:03.700Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -2000,36 +2223,52 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:49:05 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['430']
-      X-RateLimit-Reset: ['1481784546']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:49:05 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '430'
+      X-RateLimit-Reset:
+      - '1481784546'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28kendrick+lamar%29+release%3A%28good+kid%2C+m.a.a.d+city%29
   response:
-    body: {string: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata
-        created="2016-12-15T06:19:03.700Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#"
-        xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list count="10922"
-        offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9" ext:score="100"><title>good
-        kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes Deluxe
-        Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+    body:
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T06:19:03.700Z"
+        xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list
+        count="10922" offset="0"><release id="0726c5f4-da29-4a78-a8ab-b08e632fe3b9"
+        ext:score="100"><title>good kid, m.A.A.d city</title><status>Official</status><disambiguation>iTunes
+        Deluxe Edition</disambiguation><packaging>None</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
         id="381086ea-f511-4aba-bdf9-71c753dc5077"><name>Kendrick Lamar</name><sort-name>Lamar,
         Kendrick</sort-name><alias-list><alias sort-name="K. Dot" type="Search hint">K.
         Dot</alias><alias sort-name="Kendrick Duckworth" type="Search hint">Kendrick
@@ -2176,31 +2415,48 @@ interactions:
         id="ef1b7cc0-cd26-36f4-8ea0-04d9623786c7"><name>Netherlands</name><sort-name>Netherlands</sort-name><iso-3166-1-code-list><iso-3166-1-code>NL</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602537439430</barcode><asin>B00D3LOJ6O</asin><label-info-list><label-info><catalog-number>0602537439430</catalog-number><label
         id="c0629488-2aa2-4b46-9de8-decb27147444"><name>Aftermath Entertainment</name></label></label-info></label-info-list><medium-list
         count="1"><track-count>14</track-count><medium><format>CD</format><disc-list
-        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>'}
+        count="1"/><track-list count="14"/></medium></medium-list></release></release-list></metadata>
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:49:08 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['394']
-      X-RateLimit-Reset: ['1481784548']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:49:08 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '394'
+      X-RateLimit-Reset:
+      - '1481784548'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T05:48:08.057Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -2336,31 +2592,48 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:49:12 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 05:48:08 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['610']
-      X-RateLimit-Reset: ['1481784554']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:49:12 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 05:48:08 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '610'
+      X-RateLimit-Reset:
+      - '1481784554'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T06:19:03.700Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -2496,31 +2769,48 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:49:14 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['632']
-      X-RateLimit-Reset: ['1481784556']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:49:14 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '632'
+      X-RateLimit-Reset:
+      - '1481784556'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T06:19:03.700Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -2656,31 +2946,48 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:49:17 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['618']
-      X-RateLimit-Reset: ['1481784558']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:49:17 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '618'
+      X-RateLimit-Reset:
+      - '1481784558'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T05:48:08.057Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -2816,31 +3123,48 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:49:18 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 05:48:08 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['633']
-      X-RateLimit-Reset: ['1481784560']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:49:18 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 05:48:08 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '633'
+      X-RateLimit-Reset:
+      - '1481784560'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T06:19:03.700Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -2976,31 +3300,48 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:49:21 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['619']
-      X-RateLimit-Reset: ['1481784562']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:49:21 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '619'
+      X-RateLimit-Reset:
+      - '1481784562'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T05:48:08.057Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -3136,31 +3477,48 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:49:23 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 05:48:08 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['608']
-      X-RateLimit-Reset: ['1481784564']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:49:23 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 05:48:08 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '608'
+      X-RateLimit-Reset:
+      - '1481784564'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T06:19:03.700Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -3296,31 +3654,48 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:52:36 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['602']
-      X-RateLimit-Reset: ['1481784758']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:52:36 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '602'
+      X-RateLimit-Reset:
+      - '1481784758'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T06:19:03.700Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -3456,31 +3831,48 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:54:31 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['429']
-      X-RateLimit-Reset: ['1481784872']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:54:31 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '429'
+      X-RateLimit-Reset:
+      - '1481784872'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
-    body: {string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
         created=\"2016-12-15T06:19:03.700Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
         xmlns:ext=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"1591\"
         offset=\"0\"><release id=\"7f5a52aa-4429-4771-80ec-6c6a545b0df9\" ext:score=\"100\"><title>Garage
@@ -3616,43 +4008,386 @@ interactions:
         id=\"d1393ed6-f1d1-3c70-a5c1-890569865b72\" type=\"Live\"><primary-type>Album</primary-type><secondary-type-list><secondary-type>Live</secondary-type></secondary-type-list></release-group><label-info-list><label-info><catalog-number>CH-2012</catalog-number><label
         id=\"7961b39b-b987-472f-adac-ff90c913828a\"><name>Chance Records</name></label></label-info></label-info-list><medium-list
         count=\"1\"><track-count>15</track-count><medium><format>CD</format><disc-list
-        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"}
+        count=\"1\"/><track-list count=\"15\"/></medium></medium-list></release></release-list></metadata>"
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 06:54:33 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['431']
-      X-RateLimit-Reset: ['1481784874']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 06:54:33 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '431'
+      X-RateLimit-Reset:
+      - '1481784874'
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Connection: [close]
-      Content-Length: ['0']
-      Host: [musicbrainz.org]
-      User-Agent: ['mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
-          )']
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
     method: GET
     uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28sfaluijhfsdkjlhfs%29+release%3A%28vnielwslcns%29
   response:
-    body: {string: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata
-        created="2016-12-15T06:19:03.700Z" xmlns="http://musicbrainz.org/ns/mmd-2.0#"
-        xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list count="0" offset="0"/></metadata>'}
+    body:
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T06:19:03.700Z"
+        xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ext="http://musicbrainz.org/ns/ext#-2.0"><release-list
+        count="0" offset="0"/></metadata>
     headers:
-      Access-Control-Allow-Origin: ['*']
-      Connection: [close]
-      Content-Type: [application/xml; charset=UTF-8]
-      Date: ['Thu, 15 Dec 2016 07:06:16 GMT']
-      Last-Modified: ['Thu, 15 Dec 2016 06:19:03 GMT']
-      Server: [Jetty(9.3.10.v20160621)]
-      Vary: [Accept-Encoding]
-      X-RateLimit-Limit: ['700']
-      X-RateLimit-Remaining: ['317']
-      X-RateLimit-Reset: ['1481785576']
-    status: {code: 200, message: OK}
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Thu, 15 Dec 2016 07:06:16 GMT
+      Last-Modified:
+      - Thu, 15 Dec 2016 06:19:03 GMT
+      Server:
+      - Jetty(9.3.10.v20160621)
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '700'
+      X-RateLimit-Remaining:
+      - '317'
+      X-RateLimit-Reset:
+      - '1481785576'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28kanye+west%29+release%3A%28the+college+dropout%29
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
+        created=\"2019-07-15T18:51:51.121Z\" xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"
+        xmlns:ns2=\"http://musicbrainz.org/ns/ext#-2.0\"><release-list count=\"347517\"
+        offset=\"0\"><release id=\"99a96bf6-8166-3b7c-97ed-ea525f13ec65\" ns2:score=\"100\"><title>The
+        College Dropout</title><status>Official</status><disambiguation>edited/clean
+        version</disambiguation><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Kanye
+        West</name><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit></artist-credit><release-group
+        id=\"8a01217e-6947-3927-a39b-6691104694f1\" type=\"Album\" type-id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\"><title>The
+        College Dropout</title><primary-type id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\">Album</primary-type></release-group><date>2004-02-10</date><country>US</country><release-event-list><release-event><date>2004-02-10</date><area
+        id=\"489ce91b-6658-3307-9877-795b68554c98\"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602498617403</barcode><asin>B0001AP14E</asin><label-info-list><label-info><catalog-number>B0002035-02</catalog-number><label
+        id=\"4cccc72a-0bd0-433a-905e-dad87871397d\"><name>Roc\u2010A\u2010Fella Records</name></label></label-info></label-info-list><medium-list
+        count=\"1\"><track-count>21</track-count><medium><format>CD</format><disc-list
+        count=\"5\"/><track-list count=\"21\"/></medium></medium-list><tag-list/></release><release
+        id=\"a6949d8e-c1eb-4eee-a670-680d28dd80e6\" ns2:score=\"100\"><title>The College
+        Dropout</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Kanye
+        West</name><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit></artist-credit><release-group
+        id=\"8a01217e-6947-3927-a39b-6691104694f1\" type=\"Album\" type-id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\"><title>The
+        College Dropout</title><primary-type id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\">Album</primary-type></release-group><date>2004-02-16</date><country>GB</country><release-event-list><release-event><date>2004-02-16</date><area
+        id=\"8a754a16-0027-3a29-b6d7-2b40ea0481ed\"><name>United Kingdom</name><sort-name>United
+        Kingdom</sort-name><iso-3166-1-code-list><iso-3166-1-code>GB</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602498620618</barcode><asin>B0001MLLZK</asin><label-info-list><label-info><catalog-number>9862061</catalog-number><label
+        id=\"4cccc72a-0bd0-433a-905e-dad87871397d\"><name>Roc\u2010A\u2010Fella Records</name></label></label-info></label-info-list><medium-list
+        count=\"1\"><track-count>21</track-count><medium><format>CD</format><disc-list
+        count=\"5\"/><track-list count=\"21\"/></medium></medium-list><tag-list/></release><release
+        id=\"b0f5a6ab-ebad-43d7-b880-c5a6d6a3e79d\" ns2:score=\"100\"><title>The College
+        Dropout</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Kanye
+        West</name><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit></artist-credit><release-group
+        id=\"8a01217e-6947-3927-a39b-6691104694f1\" type=\"Album\" type-id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\"><title>The
+        College Dropout</title><primary-type id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\">Album</primary-type></release-group><date>2005-09-21</date><country>JP</country><release-event-list><release-event><date>2005-09-21</date><area
+        id=\"2db42837-c832-3c27-b4a3-08198f75693c\"><name>Japan</name><sort-name>Japan</sort-name><iso-3166-1-code-list><iso-3166-1-code>JP</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>4988005401878</barcode><asin>B000AA7B8Y</asin><label-info-list><label-info><catalog-number>UICY-90008</catalog-number><label
+        id=\"4cccc72a-0bd0-433a-905e-dad87871397d\"><name>Roc\u2010A\u2010Fella Records</name></label></label-info></label-info-list><medium-list
+        count=\"1\"><track-count>22</track-count><medium><format>CD</format><disc-list
+        count=\"1\"/><track-list count=\"22\"/></medium></medium-list><tag-list/></release><release
+        id=\"da13b81f-7b09-3fb6-b5c9-8551f22c797e\" ns2:score=\"100\"><title>The College
+        Dropout</title><status>Official</status><packaging>Jewel Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Kanye
+        West</name><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit></artist-credit><release-group
+        id=\"8a01217e-6947-3927-a39b-6691104694f1\" type=\"Album\" type-id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\"><title>The
+        College Dropout</title><primary-type id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\">Album</primary-type></release-group><date>2004-02-10</date><country>US</country><release-event-list><release-event><date>2004-02-10</date><area
+        id=\"489ce91b-6658-3307-9877-795b68554c98\"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602498617397</barcode><asin>B0001AP12G</asin><label-info-list><label-info><catalog-number>B0002030-02</catalog-number><label
+        id=\"4cccc72a-0bd0-433a-905e-dad87871397d\"><name>Roc\u2010A\u2010Fella Records</name></label></label-info></label-info-list><medium-list
+        count=\"1\"><track-count>21</track-count><medium><format>CD</format><disc-list
+        count=\"6\"/><track-list count=\"21\"/></medium></medium-list><tag-list/></release><release
+        id=\"1065bda8-c38f-4824-8ce1-248014836d3f\" ns2:score=\"100\"><title>The College
+        Dropout</title><status>Official</status><disambiguation>2 \xD7 Vinyl, LP,
+        Album</disambiguation><packaging>Other</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit><release-group id=\"8a01217e-6947-3927-a39b-6691104694f1\"
+        type=\"Album\" type-id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\"><title>The
+        College Dropout</title><primary-type id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\">Album</primary-type></release-group><date>2004-02-10</date><country>US</country><release-event-list><release-event><date>2004-02-10</date><area
+        id=\"489ce91b-6658-3307-9877-795b68554c98\"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>602498617410</barcode><label-info-list><label-info><catalog-number>B0002030-01</catalog-number><label
+        id=\"4cccc72a-0bd0-433a-905e-dad87871397d\"><name>Roc\u2010A\u2010Fella Records</name></label></label-info></label-info-list><medium-list
+        count=\"1\"><track-count>15</track-count><medium><format>12\" Vinyl</format><disc-list
+        count=\"0\"/><track-list count=\"15\"/></medium></medium-list><tag-list/></release><release
+        id=\"57c1522d-e578-4626-86b9-5f75a2d15059\" ns2:score=\"100\"><title>The College
+        Dropout</title><status>Bootleg</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Kanye
+        West</name><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit></artist-credit><release-group
+        id=\"8a01217e-6947-3927-a39b-6691104694f1\" type=\"Album\" type-id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\"><title>The
+        College Dropout</title><primary-type id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\">Album</primary-type></release-group><medium-list
+        count=\"1\"><track-count>18</track-count><medium><disc-list count=\"0\"/><track-list
+        count=\"18\"/></medium></medium-list><tag-list/></release><release id=\"c16a35c4-60df-469c-89c1-8b1ca1798ce1\"
+        ns2:score=\"100\"><title>The College Dropout</title><status>Bootleg</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Kanye
+        West</name><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit></artist-credit><release-group
+        id=\"8a01217e-6947-3927-a39b-6691104694f1\" type=\"Album\" type-id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\"><title>The
+        College Dropout</title><primary-type id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\">Album</primary-type></release-group><date>2003-07</date><country>XW</country><release-event-list><release-event><date>2003-07</date><area
+        id=\"525d4e18-3d00-31b9-a58b-a146a916de8f\"><name>[Worldwide]</name><sort-name>[Worldwide]</sort-name><iso-3166-1-code-list><iso-3166-1-code>XW</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><medium-list
+        count=\"1\"><track-count>15</track-count><medium><format>Digital Media</format><disc-list
+        count=\"0\"/><track-list count=\"15\"/></medium></medium-list><tag-list/></release><release
+        id=\"63538887-8b34-4fd7-8594-5a48610302ee\" ns2:score=\"93\"><title>The College
+        Dropout Mixtape</title><status>Bootleg</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Kanye
+        West</name><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit></artist-credit><release-group
+        id=\"3584f709-ff60-32b1-8e49-0404d36b55c9\" type=\"Album\" type-id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\"><title>The
+        College Dropout Mixtape</title><primary-type id=\"f529b476-6e62-324f-b0aa-1f3e33d313fc\">Album</primary-type><secondary-type-list><secondary-type
+        id=\"15c1b1f5-d893-3375-a1db-e180c5ae15ed\">Mixtape/Street</secondary-type></secondary-type-list></release-group><date>2003</date><country>US</country><release-event-list><release-event><date>2003</date><area
+        id=\"489ce91b-6658-3307-9877-795b68554c98\"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><asin>B000BJAQGI</asin><medium-list
+        count=\"1\"><track-count>19</track-count><medium><disc-list count=\"0\"/><track-list
+        count=\"19\"/></medium></medium-list><tag-list/></release><release id=\"de438f49-e112-4060-b141-c5e780094bef\"
+        ns2:score=\"89\"><title>College Dropout: Video Anthology</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Kanye
+        West</name><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit></artist-credit><release-group
+        id=\"fdf1df79-1936-3779-ab2d-6f440dc2637e\" type=\"EP\" type-id=\"6d0c5bf6-7a33-3420-a519-44fc63eedebf\"><title>College
+        Dropout: Video Anthology</title><primary-type id=\"6d0c5bf6-7a33-3420-a519-44fc63eedebf\">EP</primary-type></release-group><date>2005-03-22</date><country>US</country><release-event-list><release-event><date>2005-03-22</date><area
+        id=\"489ce91b-6658-3307-9877-795b68554c98\"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>075021033764</barcode><asin>B0007LEJKY</asin><label-info-list><label-info><catalog-number>0075021033764</catalog-number><label
+        id=\"4cccc72a-0bd0-433a-905e-dad87871397d\"><name>Roc\u2010A\u2010Fella Records</name></label></label-info></label-info-list><medium-list
+        count=\"2\"><track-count>16</track-count><medium><format>DVD</format><disc-list
+        count=\"0\"/><track-list count=\"9\"/></medium><medium><format>CD</format><disc-list
+        count=\"0\"/><track-list count=\"7\"/></medium></medium-list><tag-list/></release><release
+        id=\"00e8c7f0-8a26-48e0-824e-0b657cb786f8\" ns2:score=\"58\"><title>College
+        Dropout</title><status>Official</status><packaging>None</packaging><artist-credit><name-credit><name>Ril\xE8s</name><artist
+        id=\"d5651d1a-6ddd-4650-96fc-0e475d77862d\"><name>Ril\xE8s</name><sort-name>Ril\xE8s</sort-name></artist></name-credit></artist-credit><release-group
+        id=\"3ab46a97-b206-4d1a-8cbb-69ece0cacd3a\" type=\"Single\" type-id=\"d6038452-8ee0-3f68-affc-2de9a1ede0b9\"><title>College
+        Dropout</title><primary-type id=\"d6038452-8ee0-3f68-affc-2de9a1ede0b9\">Single</primary-type></release-group><date>2016-06-07</date><country>FR</country><release-event-list><release-event><date>2016-06-07</date><area
+        id=\"08310658-51eb-3801-80de-5a0739207115\"><name>France</name><sort-name>France</sort-name><iso-3166-1-code-list><iso-3166-1-code>FR</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><medium-list
+        count=\"1\"><track-count>1</track-count><medium><format>Digital Media</format><disc-list
+        count=\"0\"/><track-list count=\"1\"/></medium></medium-list><tag-list/></release></release-list></metadata>"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Length:
+      - '13279'
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Mon, 15 Jul 2019 18:51:51 GMT
+      ETag:
+      - '"ZjgwMDJjMDAwMDAwMDAwMFNvbHI="'
+      Last-Modified:
+      - Mon, 15 Jul 2019 18:50:37 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache-Status:
+      - MISS
+      X-RateLimit-Limit:
+      - '1200'
+      X-RateLimit-Remaining:
+      - '1141'
+      X-RateLimit-Reset:
+      - '1563216712'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/b0f5a6ab-ebad-43d7-b880-c5a6d6a3e79d?inc=recordings+artist-credits
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><metadata xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"><release
+        id=\"b0f5a6ab-ebad-43d7-b880-c5a6d6a3e79d\"><title>The College Dropout</title><status
+        id=\"4e304316-386d-3409-af2e-78857eec5cfe\">Official</status><quality>normal</quality><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit><date>2005-09-21</date><country>JP</country><release-event-list
+        count=\"1\"><release-event><date>2005-09-21</date><area id=\"2db42837-c832-3c27-b4a3-08198f75693c\"><name>Japan</name><sort-name>Japan</sort-name><iso-3166-1-code-list><iso-3166-1-code>JP</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>4988005401878</barcode><asin>B000AA7B8Y</asin><cover-art-archive><artwork>true</artwork><count>1</count><front>true</front><back>false</back></cover-art-archive><medium-list
+        count=\"1\"><medium><position>1</position><format id=\"9712d52a-4509-3d4b-a1a2-67c88c643e31\">CD</format><track-list
+        count=\"22\" offset=\"0\"><track id=\"45debc57-4a32-3573-9fc7-024eb411f541\"><position>1</position><number>1</number><length>19000</length><recording
+        id=\"ab8b631f-9c57-4c4f-93b0-64535b342fd3\"><title>Intro</title><length>19000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"54a0d48f-fd56-3f23-b064-d5903f169a2e\"><position>2</position><number>2</number><length>239000</length><recording
+        id=\"169ae19e-9093-49f0-923b-66bccc8347ad\"><title>We Don\u2019t Care</title><length>239000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"f2036f98-42f8-31b7-bc6c-cd768622dd0e\"><position>3</position><number>3</number><length>82000</length><recording
+        id=\"ef222846-2092-4929-8612-558ba9dae2de\"><title>Graduation Day</title><length>82000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"534aedc5-a921-3869-8e19-b5c25acad03a\"><position>4</position><number>4</number><length>223000</length><recording
+        id=\"7febcc15-fc58-4c93-9d0a-9af5fd1d7e57\"><title>All Falls Down</title><length>223000</length><artist-credit><name-credit
+        joinphrase=\" feat. \"><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit><name-credit><artist
+        id=\"16eb7e6c-2eb8-400c-97d5-33891fa3303e\"><name>Syleena Johnson</name><sort-name>Johnson,
+        Syleena</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"ef5adbdd-a5ec-34a7-af21-347f90713c1d\"><position>5</position><number>5</number><length>69000</length><recording
+        id=\"760ae8d6-218a-4a09-b71a-e2a3107ada23\"><title>I\u2019ll Fly Away</title><length>70000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"05d89034-f7b3-398e-bbb8-975a8d789653\"><position>6</position><number>6</number><length>324000</length><recording
+        id=\"24a3ae61-abcb-45bc-a72e-e6d35d8cf6a1\"><title>Spaceship</title><length>324000</length><artist-credit><name-credit
+        joinphrase=\" feat. \"><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit><name-credit
+        joinphrase=\" &amp; \"><artist id=\"9bb6be36-0e7b-4d49-9d1e-9ae5cc84210d\"><name>GLC</name><sort-name>GLC</sort-name><disambiguation>US
+        rapper</disambiguation></artist></name-credit><name-credit><artist id=\"c2e49f7a-cd6f-48ca-8596-b03614ea4fe8\"><name>Consequence</name><sort-name>Consequence</sort-name><disambiguation>US
+        rapper</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id=\"9564b06f-9240-397d-86e5-9a3195b81764\"><position>7</position><number>7</number><length>193000</length><recording
+        id=\"d7bcb6d4-06ea-43b1-9d39-3e251c70db84\"><title>Jesus Walks</title><length>193000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"08ca2e93-d1e6-3a17-aa5b-bda2de623747\"><position>8</position><number>8</number><length>324000</length><recording
+        id=\"689f8418-413c-47df-9ed6-eabd2fe596cf\"><title>Never Let Me Down</title><length>324000</length><artist-credit><name-credit
+        joinphrase=\" feat. \"><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit><name-credit
+        joinphrase=\" &amp; \"><name>Jay-Z</name><artist id=\"f82bcf78-5b69-4622-a5ef-73800768d9ac\"><name>JAY-Z</name><sort-name>JAY-Z</sort-name><disambiguation>US
+        rapper</disambiguation></artist></name-credit><name-credit><artist id=\"2f39cc02-3dbb-4529-ab02-51aadbe7e4e1\"><name>J.
+        Ivy</name><sort-name>Ivy, J.</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"54278d95-ca99-36fe-a0c7-d4a03b806586\"><position>9</position><number>9</number><length>289000</length><recording
+        id=\"f503dec2-5be7-497a-80af-8404c4d592a1\"><title>Get Em High</title><length>289000</length><artist-credit><name-credit
+        joinphrase=\" feat. \"><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit><name-credit
+        joinphrase=\" &amp; \"><artist id=\"bb3cbea2-5ad4-4917-bc84-8a1975d40315\"><name>Talib
+        Kweli</name><sort-name>Talib Kweli</sort-name></artist></name-credit><name-credit><artist
+        id=\"c0a1179b-b14a-4d68-a3c1-1fdab16ed602\"><name>Common</name><sort-name>Common</sort-name><disambiguation>US
+        rapper</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id=\"2b6394c1-7db4-3cbd-96cf-de0cd37f610f\"><position>10</position><number>10</number><length>46000</length><recording
+        id=\"5afa339a-0109-4964-896e-801b36db0819\"><title>Workout Plan</title><length>46000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"7c8c4a01-c23e-3c23-9be4-e8cbe275349a\"><position>11</position><number>11</number><length>322000</length><recording
+        id=\"1e6b46e2-05ac-4fdc-b5eb-9a4d6766a0b7\"><title>The New Workout Plan</title><length>322000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"36d96135-06a1-3ecb-b63f-952c19ae8772\"><position>12</position><number>12</number><length>316000</length><recording
+        id=\"684fcd8a-1f34-4875-8c6f-e3cc77e7d79b\"><title>Slow Jamz</title><length>316000</length><artist-credit><name-credit
+        joinphrase=\" feat. \"><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit><name-credit
+        joinphrase=\" &amp; \"><artist id=\"0bc858a1-3573-4216-9423-c96dd8c72919\"><name>Twista</name><sort-name>Twista</sort-name><disambiguation>US
+        rapper</disambiguation></artist></name-credit><name-credit><artist id=\"15a5da16-8b89-4047-aefe-81473c97b5b2\"><name>Jamie
+        Foxx</name><sort-name>Foxx, Jamie</sort-name><disambiguation>Actor, comedian,
+        and singer</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id=\"098b7694-5be6-3226-a378-9d644e69fed8\"><position>13</position><number>13</number><length>246000</length><recording
+        id=\"be1a55d8-5e49-4b0a-b214-9ab7d69403f6\"><title>Breathe In Breathe Out</title><length>247000</length><artist-credit><name-credit
+        joinphrase=\" feat. \"><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit><name-credit><artist
+        id=\"0638ba22-040f-438d-83a5-9b670c4adaf5\"><name>Ludacris</name><sort-name>Ludacris</sort-name><disambiguation>US
+        rapper &amp; actor</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id=\"3f35e8a5-4a11-3021-ad9e-2df8d8d59f89\"><position>14</position><number>14</number><length>78000</length><recording
+        id=\"1e9b9c5a-8a43-481a-8e67-f96fdd39a3ab\"><title>School Spirit (skit 1)</title><length>78000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"55ab23e4-95a9-3436-a445-b3d46c618e2e\"><position>15</position><number>15</number><length>182000</length><recording
+        id=\"47a6f7df-0709-463d-960d-897fd1e11663\"><title>School Spirit</title><length>182000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"5e0e53b3-6a76-34da-81e9-9720be1cf364\"><position>16</position><number>16</number><length>43000</length><recording
+        id=\"360dc4b9-7737-4f8c-9479-38fdfdd7aadc\"><title>School Spirit (skit 2)</title><length>43000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"8ca5369d-36b4-3914-a983-6c93f4d36878\"><position>17</position><number>17</number><length>53000</length><recording
+        id=\"94e3b39c-e9e6-4639-b498-0902b730c23e\"><title>Lil Jimmy (skit)</title><length>53000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"4f5547d9-b82a-3d4d-8b2c-153e313f0673\"><position>18</position><number>18</number><length>266000</length><recording
+        id=\"377f7069-c017-477d-986a-397ab145c3a1\"><title>Two Words</title><length>266000</length><artist-credit><name-credit
+        joinphrase=\" feat. \"><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit><name-credit
+        joinphrase=\", \"><artist id=\"9f4551c6-1324-4ac5-b3fe-a5c5cfacd54d\"><name>Mos
+        Def</name><sort-name>Mos Def</sort-name></artist></name-credit><name-credit
+        joinphrase=\" &amp; \"><artist id=\"5d008bf9-2958-4640-a5de-dcdcebe711a4\"><name>Freeway</name><sort-name>Freeway</sort-name><disambiguation>US
+        rapper Leslie Pridgen</disambiguation></artist></name-credit><name-credit><name>The
+        Harlem Boys Choir</name><artist id=\"188d3eaa-26c4-4899-ae25-6138668518a6\"><name>The
+        Boys Choir of Harlem</name><sort-name>Boys Choir of Harlem, The</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"f558822f-fc85-3510-b672-d8a7731b6e61\"><position>19</position><number>19</number><length>221000</length><recording
+        id=\"2f0d7a91-363d-4bde-9005-66c5a49de11a\"><title>Through the Wire</title><length>221000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"e8d3eb6f-8acc-3d57-8b83-201f7bb6a56c\"><position>20</position><number>20</number><length>278000</length><recording
+        id=\"f08d57e0-1fb0-46d4-b6af-6de65377a6d0\"><title>Family Business</title><length>279000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"356e40fa-6171-355b-86ea-5ff152fe868b\"><position>21</position><number>21</number><length>760000</length><recording
+        id=\"0f0eab84-713a-4436-ad84-4fff857e29eb\"><title>Last Call</title><length>760000</length><artist-credit><name-credit><artist
+        id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye West</name><sort-name>West,
+        Kanye</sort-name></artist></name-credit></artist-credit></recording></track><track
+        id=\"8d033d45-3713-3088-8d5e-0ebde7532c98\"><position>22</position><number>22</number><length>236000</length><recording
+        id=\"1ee4424e-b43a-4623-9edf-793838579caa\"><title>Heavy Hitters</title><length>236000</length><artist-credit><name-credit
+        joinphrase=\" feat. \"><artist id=\"164f0d73-1234-4e2c-8743-d77bf2191051\"><name>Kanye
+        West</name><sort-name>West, Kanye</sort-name></artist></name-credit><name-credit><artist
+        id=\"9bb6be36-0e7b-4d49-9d1e-9ae5cc84210d\"><name>GLC</name><sort-name>GLC</sort-name><disambiguation>US
+        rapper</disambiguation></artist></name-credit></artist-credit></recording></track></track-list></medium></medium-list></release></metadata>"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Length:
+      - '13012'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Date:
+      - Mon, 15 Jul 2019 18:51:52 GMT
+      ETag:
+      - '"d8c6f717fe988a731f01e22a02de5a29"'
+      Server:
+      - Plack::Handler::Starlet
+      Vary:
+      - Accept-Encoding
+      X-Cache-Status:
+      - MISS
+      X-RateLimit-Limit:
+      - '1200'
+      X-RateLimit-Remaining:
+      - '912'
+      X-RateLimit-Reset:
+      - '1563216712'
+    status:
+      code: 200
+      message: OK
 version: 1
