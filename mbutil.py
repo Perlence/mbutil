@@ -151,7 +151,7 @@ def get_title(mbtrack):
 def get_artists(mbtrack):
     credits = mbtrack['artist-credit']
     artist_names = [part['artist']['name'] for part in credits if isinstance(part, dict)]
-    return '; '.join(artist_names)
+    return fix_quote('; '.join(artist_names))
 
 
 def fix_quote(s):
