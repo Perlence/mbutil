@@ -4390,4 +4390,398 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28bityoq+casdwe%29+release%3A%28teoid%29
+  response:
+    body:
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2019-07-15T19:47:22.598Z"
+        xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ns2="http://musicbrainz.org/ns/ext#-2.0"><release-list
+        count="0" offset="0"/></metadata>
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Length:
+      - '237'
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Mon, 15 Jul 2019 19:47:22 GMT
+      ETag:
+      - '"ZTM5ZmNjMDAwMDAwMDAwMFNvbHI="'
+      Last-Modified:
+      - Mon, 15 Jul 2019 19:45:00 GMT
+      X-Cache-Status:
+      - MISS
+      X-RateLimit-Limit:
+      - '1200'
+      X-RateLimit-Remaining:
+      - '1041'
+      X-RateLimit-Reset:
+      - '1563220043'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28tool%29+release%3A%28lateralus%29
+  response:
+    body:
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2019-07-15T19:47:23.521Z"
+        xmlns="http://musicbrainz.org/ns/mmd-2.0#" xmlns:ns2="http://musicbrainz.org/ns/ext#-2.0"><release-list
+        count="160" offset="0"><release id="ccc3125e-2444-4fd7-9218-141a3b19e9bb"
+        ns2:score="100"><title>Lateralus</title><status>Official</status><disambiguation>limited
+        edition picture disc</disambiguation><packaging>Gatefold Cover</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><release-group
+        id="02f79295-21e1-34cc-82f2-63219eec4f0a" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc"><title>Lateralus</title><primary-type
+        id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type></release-group><date>2005-08-26</date><country>US</country><release-event-list><release-event><date>2005-08-26</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>614223116013</barcode><label-info-list><label-info><catalog-number>61422-3116-1
+        LP</catalog-number><label id="6fb504ab-e977-4bb2-be98-627cbfa19f44"><name>Tool
+        Dissectional</name></label></label-info><label-info><catalog-number>61422-3116-1
+        LP</catalog-number><label id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano
+        Records</name></label></label-info></label-info-list><medium-list count="2"><track-count>13</track-count><medium><format>12"
+        Vinyl</format><disc-list count="0"/><track-list count="8"/></medium><medium><format>12"
+        Vinyl</format><disc-list count="0"/><track-list count="5"/></medium></medium-list><tag-list/></release><release
+        id="fdd122a2-820f-4186-841d-a9b7903c8453" ns2:score="100"><title>Lateralus</title><status>Official</status><packaging>Jewel
+        Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><release-group
+        id="02f79295-21e1-34cc-82f2-63219eec4f0a" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc"><title>Lateralus</title><primary-type
+        id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type></release-group><date>2001</date><country>XE</country><release-event-list><release-event><date>2001</date><area
+        id="89a675c2-3e37-3518-b83c-418bad59a85a"><name>Europe</name><sort-name>Europe</sort-name><iso-3166-1-code-list><iso-3166-1-code>XE</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>828765364522</barcode><label-info-list><label-info><catalog-number>82876
+        53645 2</catalog-number><label id="6fb504ab-e977-4bb2-be98-627cbfa19f44"><name>Tool
+        Dissectional</name></label></label-info><label-info><catalog-number>82876
+        53645 2</catalog-number><label id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano
+        Records</name></label></label-info></label-info-list><medium-list count="1"><track-count>13</track-count><medium><format>CD</format><disc-list
+        count="0"/><track-list count="13"/></medium></medium-list><tag-list/></release><release
+        id="ac126291-d686-32bd-9700-75141fac61dd" ns2:score="100"><title>Lateralus</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Tool</name><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><release-group
+        id="02f79295-21e1-34cc-82f2-63219eec4f0a" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc"><title>Lateralus</title><primary-type
+        id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type></release-group><date>2005-08-26</date><country>US</country><release-event-list><release-event><date>2005-08-26</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>614223116013</barcode><asin>B00005BGV2</asin><label-info-list><label-info><catalog-number>61422-3116-1
+        LP</catalog-number><label id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano
+        Records</name></label></label-info></label-info-list><medium-list count="1"><track-count>13</track-count><medium><format>Vinyl</format><disc-list
+        count="0"/><track-list count="13"/></medium></medium-list><tag-list/></release><release
+        id="451df9bc-1ba2-453c-9c60-9537a5f3c6e3" ns2:score="100"><title>Lateralus</title><status>Official</status><packaging>Jewel
+        Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Tool</name><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><release-group
+        id="02f79295-21e1-34cc-82f2-63219eec4f0a" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc"><title>Lateralus</title><primary-type
+        id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type></release-group><date>2001-05-15</date><country>XE</country><release-event-list><release-event><date>2001-05-15</date><area
+        id="89a675c2-3e37-3518-b83c-418bad59a85a"><name>Europe</name><sort-name>Europe</sort-name><iso-3166-1-code-list><iso-3166-1-code>XE</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>828765364522</barcode><asin>B00009YNGE</asin><label-info-list><label-info><catalog-number>82876
+        53645 2</catalog-number><label id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano
+        Records</name></label></label-info><label-info><catalog-number>82876 53645
+        2</catalog-number><label id="6fb504ab-e977-4bb2-be98-627cbfa19f44"><name>Tool
+        Dissectional</name></label></label-info></label-info-list><medium-list count="1"><track-count>13</track-count><medium><format>HDCD</format><disc-list
+        count="1"/><track-list count="13"/></medium></medium-list><tag-list/></release><release
+        id="a2e824b6-7b14-32ef-b990-482b53291f93" ns2:score="100"><title>Lateralus</title><status>Official</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Tool</name><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><release-group
+        id="02f79295-21e1-34cc-82f2-63219eec4f0a" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc"><title>Lateralus</title><primary-type
+        id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type></release-group><date>2001-05-14</date><country>US</country><release-event-list><release-event><date>2001-05-14</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>614223116020</barcode><asin>B00005B36H</asin><label-info-list><label-info><catalog-number>61422-31160-2
+        CD</catalog-number><label id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano
+        Records</name></label></label-info></label-info-list><medium-list count="1"><track-count>13</track-count><medium><format>HDCD</format><disc-list
+        count="7"/><track-list count="13"/></medium></medium-list><tag-list><tag count="1"><name>alternative
+        metal</name></tag><tag count="1"><name>heavy metal</name></tag><tag count="1"><name>progressive
+        metal</name></tag><tag count="1"><name>pop/rock</name></tag><tag count="1"><name>progressive
+        rock</name></tag></tag-list></release><release id="bd8a1f55-d50b-3b15-a665-d3ca1acf41b4"
+        ns2:score="100"><title>Lateralus</title><status>Official</status><packaging>Jewel
+        Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Tool</name><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><release-group
+        id="02f79295-21e1-34cc-82f2-63219eec4f0a" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc"><title>Lateralus</title><primary-type
+        id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type></release-group><date>2001-05-21</date><country>CA</country><release-event-list><release-event><date>2001-05-21</date><area
+        id="71bbafaa-e825-3e15-8ca9-017dcad1748b"><name>Canada</name><sort-name>Canada</sort-name><iso-3166-1-code-list><iso-3166-1-code>CA</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>614223301723</barcode><asin>B00005LAIB</asin><label-info-list><label-info><catalog-number>61422-33017-2
+        CD</catalog-number><label id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano
+        Records</name></label></label-info></label-info-list><medium-list count="1"><track-count>13</track-count><medium><format>HDCD</format><disc-list
+        count="7"/><track-list count="13"/></medium></medium-list><tag-list/></release><release
+        id="579278d5-75dc-4d2f-a5f3-6cc86f6c510e" ns2:score="100"><title>Lateralus</title><status>Official</status><packaging>Other</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Tool</name><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><release-group
+        id="02f79295-21e1-34cc-82f2-63219eec4f0a" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc"><title>Lateralus</title><primary-type
+        id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type></release-group><date>2001</date><country>AU</country><release-event-list><release-event><date>2001</date><area
+        id="106e0bec-b638-3b37-b731-f53d507dc00e"><name>Australia</name><sort-name>Australia</sort-name><iso-3166-1-code-list><iso-3166-1-code>AU</iso-3166-1-code></iso-3166-1-code-list></area></release-event><release-event><date>2001-05-14</date><area
+        id="85752fda-13c4-31a3-bee5-0e5cb1f51dad"><name>Germany</name><sort-name>Germany</sort-name><iso-3166-1-code-list><iso-3166-1-code>DE</iso-3166-1-code></iso-3166-1-code-list></area></release-event><release-event><date>2001-05-14</date><area
+        id="ef1b7cc0-cd26-36f4-8ea0-04d9623786c7"><name>Netherlands</name><sort-name>Netherlands</sort-name><iso-3166-1-code-list><iso-3166-1-code>NL</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>638592101326</barcode><asin>B00005J7I5</asin><label-info-list><label-info><catalog-number>9210132
+        CD</catalog-number><label id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano
+        Records</name></label></label-info><label-info><catalog-number>(7) 9210132
+        CD</catalog-number><label id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano
+        Records</name></label></label-info><label-info><catalog-number>9210132</catalog-number><label
+        id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano Records</name></label></label-info></label-info-list><medium-list
+        count="1"><track-count>13</track-count><medium><format>HDCD</format><disc-list
+        count="10"/><track-list count="13"/></medium></medium-list><tag-list><tag
+        count="0"><name>burn</name></tag></tag-list></release><release id="472168df-be3a-44ee-b31d-393155f3366d"
+        ns2:score="100"><title>Lateralus</title><status>Official</status><packaging>Jewel
+        Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><name>Tool</name><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><release-group
+        id="02f79295-21e1-34cc-82f2-63219eec4f0a" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc"><title>Lateralus</title><primary-type
+        id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type></release-group><date>2001-05-14</date><country>DE</country><release-event-list><release-event><date>2001-05-14</date><area
+        id="85752fda-13c4-31a3-bee5-0e5cb1f51dad"><name>Germany</name><sort-name>Germany</sort-name><iso-3166-1-code-list><iso-3166-1-code>DE</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>828765364522</barcode><label-info-list><label-info><catalog-number>61422-31160-2
+        CD</catalog-number><label id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano
+        Records</name></label></label-info></label-info-list><medium-list count="1"><track-count>13</track-count><medium><format>HDCD</format><disc-list
+        count="0"/><track-list count="13"/></medium></medium-list><tag-list/></release><release
+        id="74a78afb-cbf1-4291-b362-4621157e9204" ns2:score="100"><title>Lateralus</title><status>Official</status><packaging>Cassette
+        Case</packaging><text-representation><language>eng</language></text-representation><artist-credit><name-credit><name>Tool</name><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><release-group
+        id="02f79295-21e1-34cc-82f2-63219eec4f0a" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc"><title>Lateralus</title><primary-type
+        id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type></release-group><date>2001-05-15</date><country>US</country><release-event-list><release-event><date>2001-05-15</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>614223116044</barcode><label-info-list><label-info><catalog-number>61422-31160-4
+        CS</catalog-number><label id="6fb504ab-e977-4bb2-be98-627cbfa19f44"><name>Tool
+        Dissectional</name></label></label-info><label-info><catalog-number>61422-31160-4
+        CS</catalog-number><label id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano
+        Records</name></label></label-info></label-info-list><medium-list count="1"><track-count>13</track-count><medium><format>Cassette</format><disc-list
+        count="0"/><track-list count="13"/></medium></medium-list><tag-list/></release><release
+        id="3c583861-4e54-4b9c-a518-ad313b0383f5" ns2:score="85"><title>Lateralus
+        (Promo Single)</title><status>Promotion</status><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><release-group
+        id="44abaa3a-4c87-4034-9e03-bd5a3cd3136b" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9"><title>Lateralus
+        (Promo Single)</title><primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type></release-group><date>2001-05-15</date><country>US</country><release-event-list><release-event><date>2001-05-15</date><area
+        id="489ce91b-6658-3307-9877-795b68554c98"><name>United States</name><sort-name>United
+        States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><label-info-list><label-info><label
+        id="7f227463-55bf-4510-97da-82672574a0b1"><name>Volcano Records</name></label></label-info></label-info-list><medium-list
+        count="1"><track-count>1</track-count><medium><format>CD</format><disc-list
+        count="0"/><track-list count="1"/></medium></medium-list><tag-list/></release></release-list></metadata>
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Length:
+      - '16335'
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Date:
+      - Mon, 15 Jul 2019 19:47:23 GMT
+      ETag:
+      - '"YTgwMmMwMDAwMDAwMDAwU29scg=="'
+      Last-Modified:
+      - Mon, 15 Jul 2019 19:45:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache-Status:
+      - MISS
+      X-RateLimit-Limit:
+      - '1200'
+      X-RateLimit-Remaining:
+      - '841'
+      X-RateLimit-Reset:
+      - '1563220043'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/fdd122a2-820f-4186-841d-a9b7903c8453?inc=recordings
+  response:
+    body:
+      string: <?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#"><release
+        id="fdd122a2-820f-4186-841d-a9b7903c8453"><title>Lateralus</title><status
+        id="4e304316-386d-3409-af2e-78857eec5cfe">Official</status><quality>normal</quality><packaging
+        id="ec27701a-4a22-37f4-bfac-6616e0f9750a">Jewel Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><date>2001</date><country>XE</country><release-event-list
+        count="1"><release-event><date>2001</date><area id="89a675c2-3e37-3518-b83c-418bad59a85a"><name>Europe</name><sort-name>Europe</sort-name><iso-3166-1-code-list><iso-3166-1-code>XE</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>828765364522</barcode><cover-art-archive><artwork>true</artwork><count>1</count><front>false</front><back>false</back></cover-art-archive><medium-list
+        count="1"><medium><position>1</position><format id="9712d52a-4509-3d4b-a1a2-67c88c643e31">CD</format><track-list
+        offset="0" count="13"><track id="e217b724-4e6f-4905-bed9-76c9646478b3"><position>1</position><number>1</number><length>516000</length><recording
+        id="8a2fb0e1-1126-4237-9b8d-6f3359546b4b"><title>The Grudge</title><length>516253</length><disambiguation>album
+        version</disambiguation></recording></track><track id="c09d49c7-2a33-4d38-b0e6-6625a1363547"><position>2</position><number>2</number><length>67000</length><recording
+        id="9cc69146-9168-434a-a924-438305b12756"><title>Eon Blue Apocalypse</title><length>66760</length><disambiguation>album
+        version</disambiguation></recording></track><track id="a1b7c922-d44a-437b-91b3-7760cdb87f30"><position>3</position><number>3</number><length>433000</length><recording
+        id="c4a46de4-6a33-4813-9738-a1d84276a8b7"><title>The Patient</title><length>432933</length><disambiguation>album
+        version</disambiguation></recording></track><track id="10f9f5f4-318a-4e4e-85ea-9ee582f1453f"><position>4</position><number>4</number><length>74000</length><recording
+        id="47955be1-7db4-4e04-87d0-1e80da339471"><title>Mantra</title><length>73600</length><disambiguation>album
+        version</disambiguation></recording></track><track id="302aff59-727a-4ba4-9886-7089d47ec09b"><position>5</position><number>5</number><length>406000</length><recording
+        id="865f015e-0ecf-4af5-b019-9edf16ea21c5"><title>Schism</title><length>405533</length><disambiguation>album
+        version</disambiguation></recording></track><track id="85982541-815e-4743-8f78-eb5105836e58"><position>6</position><number>6</number><length>186000</length><recording
+        id="5128c310-6d92-4e96-9dc3-5defec033a51"><title>Parabol</title><length>186453</length><disambiguation>album
+        version</disambiguation></recording></track><track id="ad4c7132-04ad-4e73-93d7-5ffee4be73b4"><position>7</position><number>7</number><length>365000</length><recording
+        id="016d9643-722e-4283-85ed-2844038dc537"><title>Parabola</title><length>364533</length><disambiguation>album
+        version</disambiguation></recording></track><track id="874ea3f1-cdfd-42d1-98f2-d12c8b623bcc"><position>8</position><number>8</number><length>488000</length><recording
+        id="74c6a78f-2179-4216-a0f9-e89192610245"><title>Ticks &amp; Leeches</title><length>488000</length><disambiguation>album
+        version</disambiguation></recording></track><track id="f6dfd114-499c-427f-b9c2-83f996177485"><position>9</position><number>9</number><length>564000</length><recording
+        id="1f56ef4e-6da0-460d-b208-6499b9fab314"><title>Lateralus</title><length>564146</length><disambiguation>album
+        version</disambiguation></recording></track><track id="d86b61db-7948-43cb-a35f-8b434037909d"><position>10</position><number>10</number><length>288000</length><recording
+        id="9321c454-ae41-4d9b-96c1-dc5fca4f604c"><title>Disposition</title><length>288093</length><disambiguation>album
+        version</disambiguation></recording></track><track id="be351763-384a-4b88-9a93-880384d190a6"><position>11</position><number>11</number><length>670000</length><recording
+        id="4644157d-321c-49d7-80af-be074724816a"><title>Reflection</title><length>669733</length><disambiguation>album
+        version</disambiguation></recording></track><track id="b52e7f90-1e8a-4fbe-97e0-c3e9f71b6555"><position>12</position><number>12</number><length>526000</length><recording
+        id="45653e65-b2d0-4f94-98ca-151aa96741d9"><title>Triad</title><length>526000</length><disambiguation>album
+        version</disambiguation></recording></track><track id="1fae160b-ddbb-4900-bc20-2958a7ca3d02"><position>13</position><number>13</number><length>160000</length><recording
+        id="243e9a0e-9265-4c51-b072-2beb4b7d535c"><title>Faaip de Oiad</title><length>160000</length><disambiguation>album
+        version</disambiguation></recording></track></track-list></medium></medium-list></release></metadata>
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Length:
+      - '4730'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Date:
+      - Mon, 15 Jul 2019 19:47:24 GMT
+      ETag:
+      - '"271cf88f8cb6441a60b0fa43236e5b5c"'
+      Server:
+      - Plack::Handler::Starlet
+      Vary:
+      - Accept-Encoding
+      X-Cache-Status:
+      - MISS
+      X-RateLimit-Limit:
+      - '1200'
+      X-RateLimit-Remaining:
+      - '1060'
+      X-RateLimit-Reset:
+      - '1563220045'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Host:
+      - musicbrainz.org
+      User-Agent:
+      - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
+        )
+    method: GET
+    uri: http://musicbrainz.org/ws/2/release/fdd122a2-820f-4186-841d-a9b7903c8453?inc=recordings+artist-credits
+  response:
+    body:
+      string: <?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#"><release
+        id="fdd122a2-820f-4186-841d-a9b7903c8453"><title>Lateralus</title><status
+        id="4e304316-386d-3409-af2e-78857eec5cfe">Official</status><quality>normal</quality><packaging
+        id="ec27701a-4a22-37f4-bfac-6616e0f9750a">Jewel Case</packaging><text-representation><language>eng</language><script>Latn</script></text-representation><artist-credit><name-credit><artist
+        id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit><date>2001</date><country>XE</country><release-event-list
+        count="1"><release-event><date>2001</date><area id="89a675c2-3e37-3518-b83c-418bad59a85a"><name>Europe</name><sort-name>Europe</sort-name><iso-3166-1-code-list><iso-3166-1-code>XE</iso-3166-1-code></iso-3166-1-code-list></area></release-event></release-event-list><barcode>828765364522</barcode><cover-art-archive><artwork>true</artwork><count>1</count><front>false</front><back>false</back></cover-art-archive><medium-list
+        count="1"><medium><position>1</position><format id="9712d52a-4509-3d4b-a1a2-67c88c643e31">CD</format><track-list
+        offset="0" count="13"><track id="e217b724-4e6f-4905-bed9-76c9646478b3"><position>1</position><number>1</number><length>516000</length><recording
+        id="8a2fb0e1-1126-4237-9b8d-6f3359546b4b"><title>The Grudge</title><length>516253</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="c09d49c7-2a33-4d38-b0e6-6625a1363547"><position>2</position><number>2</number><length>67000</length><recording
+        id="9cc69146-9168-434a-a924-438305b12756"><title>Eon Blue Apocalypse</title><length>66760</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="a1b7c922-d44a-437b-91b3-7760cdb87f30"><position>3</position><number>3</number><length>433000</length><recording
+        id="c4a46de4-6a33-4813-9738-a1d84276a8b7"><title>The Patient</title><length>432933</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="10f9f5f4-318a-4e4e-85ea-9ee582f1453f"><position>4</position><number>4</number><length>74000</length><recording
+        id="47955be1-7db4-4e04-87d0-1e80da339471"><title>Mantra</title><length>73600</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="302aff59-727a-4ba4-9886-7089d47ec09b"><position>5</position><number>5</number><length>406000</length><recording
+        id="865f015e-0ecf-4af5-b019-9edf16ea21c5"><title>Schism</title><length>405533</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="85982541-815e-4743-8f78-eb5105836e58"><position>6</position><number>6</number><length>186000</length><recording
+        id="5128c310-6d92-4e96-9dc3-5defec033a51"><title>Parabol</title><length>186453</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="ad4c7132-04ad-4e73-93d7-5ffee4be73b4"><position>7</position><number>7</number><length>365000</length><recording
+        id="016d9643-722e-4283-85ed-2844038dc537"><title>Parabola</title><length>364533</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="874ea3f1-cdfd-42d1-98f2-d12c8b623bcc"><position>8</position><number>8</number><length>488000</length><recording
+        id="74c6a78f-2179-4216-a0f9-e89192610245"><title>Ticks &amp; Leeches</title><length>488000</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="f6dfd114-499c-427f-b9c2-83f996177485"><position>9</position><number>9</number><length>564000</length><recording
+        id="1f56ef4e-6da0-460d-b208-6499b9fab314"><title>Lateralus</title><length>564146</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="d86b61db-7948-43cb-a35f-8b434037909d"><position>10</position><number>10</number><length>288000</length><recording
+        id="9321c454-ae41-4d9b-96c1-dc5fca4f604c"><title>Disposition</title><length>288093</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="be351763-384a-4b88-9a93-880384d190a6"><position>11</position><number>11</number><length>670000</length><recording
+        id="4644157d-321c-49d7-80af-be074724816a"><title>Reflection</title><length>669733</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="b52e7f90-1e8a-4fbe-97e0-c3e9f71b6555"><position>12</position><number>12</number><length>526000</length><recording
+        id="45653e65-b2d0-4f94-98ca-151aa96741d9"><title>Triad</title><length>526000</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track><track
+        id="1fae160b-ddbb-4900-bc20-2958a7ca3d02"><position>13</position><number>13</number><length>160000</length><recording
+        id="243e9a0e-9265-4c51-b072-2beb4b7d535c"><title>Faaip de Oiad</title><length>160000</length><disambiguation>album
+        version</disambiguation><artist-credit><name-credit><artist id="66fc5bf8-daa4-4241-b378-9bc9077939d2"><name>Tool</name><sort-name>Tool</sort-name><disambiguation>US
+        progressive metal band</disambiguation></artist></name-credit></artist-credit></recording></track></track-list></medium></medium-list></release></metadata>
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Content-Length:
+      - '7796'
+      Content-Type:
+      - application/xml; charset=utf-8
+      Date:
+      - Mon, 15 Jul 2019 19:47:27 GMT
+      ETag:
+      - '"aa314e3449512303f2bd4c6af2dae2e1"'
+      Server:
+      - Plack::Handler::Starlet
+      Vary:
+      - Accept-Encoding
+      X-Cache-Status:
+      - MISS
+      X-RateLimit-Limit:
+      - '1200'
+      X-RateLimit-Remaining:
+      - '859'
+      X-RateLimit-Reset:
+      - '1563220047'
+    status:
+      code: 200
+      message: OK
 version: 1

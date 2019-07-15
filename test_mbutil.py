@@ -78,10 +78,36 @@ def test_cli_artists(set_useragent, kanye_raw_tracks, kanye_artists, custom_vcr)
     err = io.StringIO()
     with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
         mbutil.cli(['--artist'], iter(kanye_raw_tracks), out, err)
-    print(out.getvalue())
-    print(err.getvalue())
     assert out.getvalue().splitlines() == kanye_artists
     assert err.getvalue().splitlines() == ['Kanye West - 2005-09-21 The College Dropout']
+
+
+def test_cli_missing(set_useragent, bityoq_raw_tracks, tool_raw_tracks, custom_vcr):
+    bityoq_titles = [mbutil.parse_foobar_clipboard(track).title for track in bityoq_raw_tracks]
+    tool_titles = [mbutil.parse_foobar_clipboard(track).title for track in tool_raw_tracks]
+    it = iter([*bityoq_raw_tracks, *tool_raw_tracks])
+    out = io.StringIO()
+    err = io.StringIO()
+    with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
+        mbutil.cli([], it, out, err)
+    assert out.getvalue().splitlines() == [*bityoq_titles, *tool_titles]
+    assert err.getvalue().splitlines() == [
+        'ERROR: nothing found for Bityoq Casdwe - Teoid',
+        'Tool - 2001 Lateralus',
+    ]
+
+    bityoq_artists = [mbutil.parse_foobar_clipboard(track).artist for track in bityoq_raw_tracks]
+    tool_artists = [mbutil.parse_foobar_clipboard(track).artist for track in tool_raw_tracks]
+    it = iter([*bityoq_raw_tracks, *tool_raw_tracks])
+    out = io.StringIO()
+    err = io.StringIO()
+    with custom_vcr.use_cassette('fixtures/musicbrainz.yaml'):
+        mbutil.cli(['--artist'], it, out, err)
+    assert out.getvalue().splitlines() == [*bityoq_artists, *tool_artists]
+    assert err.getvalue().splitlines() == [
+        'ERROR: nothing found for Bityoq Casdwe - Teoid',
+        'Tool - 2001 Lateralus',
+    ]
 
 
 @pytest.fixture
@@ -93,17 +119,8 @@ def set_useragent():
 def custom_vcr():
     def unordered_query(r1, r2):
         return dict(r1.query) == dict(r2.query)
-        # if len(r1.query) != len(r2.query):
-        #     return False
-        # query = r2.query[:]
-        # for pair in r1.query:
-        #     try:
-        #         query.remove(pair)
-        #     except ValueError:
-        #         return False
-        # print(r1.query, r2.query, query)
-        # return not query
     v = vcr.VCR()
+    # v = vcr.VCR(record_mode='new_episodes')
     v.register_matcher('unordered_query', unordered_query)
     v.match_on = ['method', 'scheme', 'host', 'port', 'path', 'unordered_query']
     return v
@@ -244,4 +261,19 @@ Kanye West
 Kanye West
 Kanye West
 Kanye West; GLC
+""".splitlines()
+
+
+@pytest.fixture
+def bityoq_raw_tracks():
+    return """\
+Bityoq Casdwe - [Teoid #01] No. 1
+Bityoq Casdwe - [Teoid #02] No. 2
+Bityoq Casdwe - [Teoid #03] No. 3
+Bityoq Casdwe - [Teoid #04] No. 4
+Bityoq Casdwe - [Teoid #05] No. 5
+Bityoq Casdwe - [Teoid #06] No. 6
+Bityoq Casdwe - [Teoid #07] No. 7
+Bityoq Casdwe - [Teoid #08] No. 8
+Bityoq Casdwe - [Teoid #09] No. 9
 """.splitlines()

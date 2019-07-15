@@ -25,33 +25,30 @@ def cli(args, stdin, stdout, stderr):
     if args.artist:
         release_includes = ['recordings', 'artist-credits']
         track_handler = get_artists
+        fallback_field = 'artist'
     else:
         release_includes = ['recordings']
         track_handler = get_title
+        fallback_field = 'title'
 
     lines = list(stdin)
     parsed_tracks = list(map(parse_foobar_clipboard, lines))
     track_dict_by_artist_album = dict_groupby(parsed_tracks, lambda t: (t.artist, t.album), mapping=OrderedDict)
     tracks_by_artist_album = groupby(parsed_tracks, lambda t: (t.artist, t.album))
-    indexed_tracks = defaultdict(dict)  # {(artist, album): {(discnumber, tracknumber): mbtrack}}
+    indexed_tracks = defaultdict(dict)  # {(artist, album): {(discnumber, tracknumber): Optional[mbtrack]}}
     for (artist, album), track_iter in tracks_by_artist_album:
         if (artist, album) not in indexed_tracks:
-            release = pick_release(track_dict_by_artist_album[(artist, album)])
-            if release is None:
+            release, mbtracks = get_mbtracks(track_dict_by_artist_album[(artist, album)], release_includes)
+            indexed_tracks[(artist, album)].update(mbtracks)
+            if not release:
                 print('ERROR: nothing found for {} - {}'.format(artist, album), file=stderr)
-                continue
-            release_with_recordings = mb.get_release_by_id(release['id'], includes=release_includes)
-
-            print(album_information(release), file=stderr)
-
-            # Index received tracks
-            for discnumber, medium in enumerate(release_with_recordings['release']['medium-list'], start=1):
-                for tracknumber, mbtrack in enumerate(medium['track-list'], start=1):
-                    indexed_tracks[(artist, album)][(discnumber, tracknumber)] = mbtrack
+            else:
+                print(album_information(release), file=stderr)
 
         for track in track_iter:
             mbtrack = indexed_tracks[(artist, album)][(track.discnumber or 1, track.track)]
-            print(track_handler(mbtrack), file=stdout)
+            result = track_handler(mbtrack) if mbtrack else getattr(track, fallback_field)
+            print(result, file=stdout)
 
 
 def parse_foobar_clipboard(line):
@@ -84,6 +81,26 @@ def dict_groupby(iterable, key, mapping=dict):
     for item in iterable:
         result.setdefault(key(item), []).append(item)
     return result
+
+
+def get_mbtracks(tracks, release_includes):
+    release = pick_release(tracks)
+    if release is None:
+        mbtracks = {
+            (track.discnumber or 1, track.track): None
+            for track in tracks
+        }
+        return None, mbtracks
+
+    release_with_recordings = mb.get_release_by_id(release['id'], includes=release_includes)
+
+    # Index received tracks
+    mbtracks = {}
+    for discnumber, medium in enumerate(release_with_recordings['release']['medium-list'], start=1):
+        for tracknumber, mbtrack in enumerate(medium['track-list'], start=1):
+            mbtracks[(discnumber, tracknumber)] = mbtrack
+
+    return release, mbtracks
 
 
 def pick_release(tracks):
