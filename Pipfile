@@ -8,8 +8,4 @@ pytest = "*"
 vcrpy = "*"
 
 [packages]
-musicbrainzngs = "*"
-titlecase = "*"
-
-[requires]
-python_version = "3.7"
+mbutil = {editable = true, path = "."}
