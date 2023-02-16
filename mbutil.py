@@ -155,7 +155,7 @@ def get_artists(mbtrack):
 
 
 def fix_quote(s):
-    return s.replace("’", "'")
+    return s.replace("’", "'").replace('‐', '-')
 
 
 if __name__ == '__main__':
