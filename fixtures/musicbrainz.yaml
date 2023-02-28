@@ -12,7 +12,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -189,7 +189,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/7f5a52aa-4429-4771-80ec-6c6a545b0df9?inc=recordings
+    uri: https://musicbrainz.org/ws/2/release/7f5a52aa-4429-4771-80ec-6c6a545b0df9?inc=recordings
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#"><release
@@ -294,7 +294,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-14T13:39:00.011Z"
@@ -486,7 +486,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/48415b02-026d-49e8-8daf-e0c6c0e6836f?inc=recordings
+    uri: https://musicbrainz.org/ws/2/release/48415b02-026d-49e8-8daf-e0c6c0e6836f?inc=recordings
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><metadata xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"><release
@@ -565,7 +565,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28vnielwslcns%29+artist%3A%28sfaluijhfsdkjlhfs%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28vnielwslcns%29+artist%3A%28sfaluijhfsdkjlhfs%29
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-14T13:39:00.011Z"
@@ -608,7 +608,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -785,7 +785,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T05:48:08.057Z"
@@ -977,7 +977,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -1154,7 +1154,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T05:48:08.057Z"
@@ -1346,7 +1346,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -1523,7 +1523,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T06:19:03.700Z"
@@ -1715,7 +1715,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -1892,7 +1892,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28good+kid%2C+m.a.a.d+city%29+artist%3A%28kendrick+lamar%29
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T05:48:08.057Z"
@@ -2084,7 +2084,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -2261,7 +2261,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28kendrick+lamar%29+release%3A%28good+kid%2C+m.a.a.d+city%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28kendrick+lamar%29+release%3A%28good+kid%2C+m.a.a.d+city%29
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T06:19:03.700Z"
@@ -2453,7 +2453,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -2630,7 +2630,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -2807,7 +2807,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -2984,7 +2984,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -3161,7 +3161,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -3338,7 +3338,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28metallica%29+release%3A%28garage+inc.%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -3515,7 +3515,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -3692,7 +3692,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -3869,7 +3869,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=release%3A%28garage+inc.%29+artist%3A%28metallica%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -4046,7 +4046,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28sfaluijhfsdkjlhfs%29+release%3A%28vnielwslcns%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28sfaluijhfsdkjlhfs%29+release%3A%28vnielwslcns%29
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2016-12-15T06:19:03.700Z"
@@ -4089,7 +4089,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28kanye+west%29+release%3A%28the+college+dropout%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28kanye+west%29+release%3A%28the+college+dropout%29
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><metadata
@@ -4238,7 +4238,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/b0f5a6ab-ebad-43d7-b880-c5a6d6a3e79d?inc=recordings+artist-credits
+    uri: https://musicbrainz.org/ws/2/release/b0f5a6ab-ebad-43d7-b880-c5a6d6a3e79d?inc=recordings+artist-credits
   response:
     body:
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><metadata xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"><release
@@ -4403,7 +4403,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28bityoq+casdwe%29+release%3A%28teoid%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28bityoq+casdwe%29+release%3A%28teoid%29
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2019-07-15T19:47:22.598Z"
@@ -4448,7 +4448,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28tool%29+release%3A%28lateralus%29
+    uri: https://musicbrainz.org/ws/2/release/?limit=10&query=artist%3A%28tool%29+release%3A%28lateralus%29
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><metadata created="2019-07-15T19:47:23.521Z"
@@ -4616,7 +4616,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/fdd122a2-820f-4186-841d-a9b7903c8453?inc=recordings
+    uri: https://musicbrainz.org/ws/2/release/fdd122a2-820f-4186-841d-a9b7903c8453?inc=recordings
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#"><release
@@ -4693,7 +4693,7 @@ interactions:
       - mbutil/0.1 python-musicbrainzngs/0.6 ( https://github.com/Perlence/mbutil
         )
     method: GET
-    uri: http://musicbrainz.org/ws/2/release/fdd122a2-820f-4186-841d-a9b7903c8453?inc=recordings+artist-credits
+    uri: https://musicbrainz.org/ws/2/release/fdd122a2-820f-4186-841d-a9b7903c8453?inc=recordings+artist-credits
   response:
     body:
       string: <?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-2.0#"><release
